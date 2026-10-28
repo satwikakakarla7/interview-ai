@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>InterviewAI - Practice interview answers</title>
+  <meta name="description" content="Practice interview questions out loud, get instant feedback on clarity, confidence and relevance, and learn from model answers." />
+  <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0C1322" media="(prefers-color-scheme: dark)" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%232F48C9'/%3E%3Cpath d='M9 9.5h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-7l-4.5 3.5v-3.5H9a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2z' fill='none' stroke='%23fff' stroke-width='2' stroke-linejoin='round'/%3E%3Cpath d='M11.5 15.5h9' stroke='%23FFE15A' stroke-width='3.2' stroke-linecap='round'/%3E%3C/svg%3E" />
+  <link rel="preload" href="fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/ibm-plex-serif-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <script>
+    // Apply a saved theme before first paint to avoid a flash.
+    try { var t = localStorage.getItem("iai-theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#/practice">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+          <rect width="32" height="32" rx="9" fill="#2F48C9" />
+          <path d="M9 9.5h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-7l-4.5 3.5v-3.5H9a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round" />
+          <path d="M11.5 15.5h9" stroke="#FFE15A" stroke-width="3.2" stroke-linecap="round" />
+        </svg>
+        <span class="brand-name">Interview<span>AI</span></span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="#/practice" data-route="practice">Practice</a>
+        <a href="#/bank" data-route="bank">Question bank</a>
+        <a href="#/progress" data-route="progress">Progress</a>
+      </nav>
+      <div class="account-area" id="accountArea">
+        <a class="btn ghost small" href="#/login" data-guest>Log in</a>
+        <a class="btn primary small" href="#/register" data-guest>Sign up</a>
+        <a class="account-link" href="#/account" data-user hidden>
+          <span class="avatar" id="avatar" aria-hidden="true"></span>
+          <span class="account-name" id="accountName"></span>
+        </a>
+      </div>
+      <button type="button" class="icon-btn" id="themeToggle" aria-label="Switch to dark theme">
+        <svg class="i i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" /></svg>
+        <svg class="i i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" /><path d="M12 2.5v2M12 19.5v2M4.6 4.6 6 6M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4" /></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <!-- ============ PRACTICE ============ -->
+    <section id="view-practice" class="view" aria-labelledby="practiceTitle">
+      <h1 id="practiceTitle" class="sr-only" tabindex="-1">Practice</h1>
+
+      <div class="toolbar">
+        <label class="field">
+          <span class="field-label">Topic</span>
+          <select id="category"></select>
+        </label>
+        <label class="field">
+          <span class="field-label">Difficulty</span>
+          <select id="difficulty"></select>
+        </label>
+        <p class="counter" id="counter"></p>
+      </div>
+
+      <div class="sheet practice">
+        <div class="prompt">
+          <div class="tags" id="qTags"></div>
+          <p class="question" id="qText"><span class="skeleton"></span><span class="skeleton short"></span></p>
+          <p class="best" id="qBest"></p>
+          <div class="prompt-actions">
+            <button type="button" class="btn ghost" id="hintBtn" aria-expanded="false" aria-controls="hint">
+              <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 21h4" /><path d="M12 3a6 6 0 0 0-3.6 10.8c.6.5 1 1.2 1 2v.2h5.2v-.2c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z" /></svg>
+              <span>Show hint</span>
+            </button>
+            <button type="button" class="btn ghost" id="skipBtn">
+              <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 5 9 7-9 7z" /><path d="M18 5v14" /></svg>
+              <span>Skip question</span>
+            </button>
+          </div>
+          <div class="hint" id="hint" hidden>
+            <p class="hint-title">Hint</p>
+            <p id="hintText"></p>
+          </div>
+        </div>
+
+        <div class="response">
+          <h2 class="response-title">Your answer</h2>
+          <div class="recorder">
+            <button type="button" class="rec" id="recBtn" aria-pressed="false">
+              <svg class="i i-mic" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3" /><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21" /></svg>
+              <svg class="i i-stop" viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="2" /></svg>
+              <span id="recLabel">Start speaking</span>
+            </button>
+            <span class="timer" id="timer" role="timer" aria-label="Recording time">00:00</span>
+            <button type="button" class="btn ghost small" id="uploadBtn">
+              <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15V4M7 9l5-5 5 5M5 20h14" /></svg>
+              <span>Upload audio</span>
+            </button>
+            <input type="file" id="audioFile" accept="audio/*" hidden />
+          </div>
+          <p class="status" id="recStatus" role="status"></p>
+          <label for="answer" class="sr-only">Your answer</label>
+          <textarea id="answer" rows="10" maxlength="20000" placeholder="Speak or type your answer. Aim for one to two minutes, about 60 to 200 words."></textarea>
+          <div class="response-foot">
+            <p class="wordcount"><span id="wordCount">0 words</span><span class="target">Aim for 60–200</span></p>
+            <span class="shortcut" aria-hidden="true"><kbd>Ctrl</kbd> + <kbd>Enter</kbd></span>
+            <button type="button" class="btn primary" id="analyzeBtn">Get feedback</button>
+          </div>
+          <p class="error" id="error" role="alert"></p>
+        </div>
+      </div>
+
+      <!-- Feedback, revealed after an attempt -->
+      <section class="sheet results" id="results" hidden aria-labelledby="resultsTitle">
+        <div class="results-section">
+          <h2 id="resultsTitle" tabindex="-1">How your answer scored</h2>
+          <div class="scorecard">
+            <div class="overall">
+              <span class="overall-score" id="overallScore">0</span>
+              <span class="overall-label">Overall score</span>
+              <span class="rating" id="overallRating"></span>
+            </div>
+            <div class="criteria" id="criteria"></div>
+          </div>
+          <dl class="metrics" id="metrics"></dl>
+        </div>
+
+        <div class="results-section two-col">
+          <div>
+            <h3>What worked</h3>
+            <ul class="list list-good" id="strengths"></ul>
+          </div>
+          <div>
+            <h3>What to improve</h3>
+            <ul class="list list-improve" id="improvements"></ul>
+          </div>
+        </div>
+
+        <div class="results-section learn">
+          <h2>Learn from a model answer</h2>
+          <p class="section-note">Each key concept is highlighted where it first appears in both answers. Compare them, then try again or move on.</p>
+          <div class="compare">
+            <article class="pane pane-yours">
+              <h3>Your answer</h3>
+              <div class="pane-body" id="yourAnswer"></div>
+            </article>
+            <article class="pane pane-model">
+              <h3>Model answer</h3>
+              <div class="pane-body" id="modelAnswer"></div>
+            </article>
+          </div>
+          <div class="concept-rows">
+            <div class="concept-row">
+              <h3>Key concepts</h3>
+              <ul class="chips" id="concepts"></ul>
+            </div>
+            <div class="concept-row" id="starRow">
+              <h3>STAR structure</h3>
+              <ul class="chips" id="star"></ul>
+            </div>
+          </div>
+          <div class="three-col">
+            <div>
+              <h3>What interviewers look for</h3>
+              <ul class="list list-plain" id="tips"></ul>
+            </div>
+            <div>
+              <h3>Common mistakes</h3>
+              <ul class="list list-plain" id="mistakes"></ul>
+            </div>
+            <div>
+              <h3>Likely follow-up questions</h3>
+              <ul class="list list-plain" id="followUps"></ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="results-actions">
+          <button type="button" class="btn primary" id="nextBtn">Next question</button>
+          <button type="button" class="btn secondary" id="retryBtn">
+            <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12a8.5 8.5 0 1 0 2.6-6.1L3.5 8.5" /><path d="M3.5 3.5v5h5" /></svg>
+            <span>Try this question again</span>
+          </button>
+          <p class="save-nudge" data-guest>You're practicing as a guest. <a href="#/register">Create an account</a> to keep your progress.</p>
+        </div>
+      </section>
+    </section>
+
+    <!-- ============ QUESTION BANK ============ -->
+    <section id="view-bank" class="view" hidden aria-labelledby="bankTitle">
+      <div class="view-head">
+        <div>
+          <h1 id="bankTitle" tabindex="-1">Question bank</h1>
+          <p class="view-sub" id="bankSummary"></p>
+        </div>
+      </div>
+      <div class="sheet">
+        <div class="filters">
+          <label class="search">
+            <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5" /></svg>
+            <span class="sr-only">Search questions</span>
+            <input type="search" id="bankSearch" placeholder="Search questions" autocomplete="off" />
+          </label>
+          <div class="filter-chips" id="bankCats" role="group" aria-label="Filter by topic"></div>
+          <div class="filter-row">
+            <div class="seg" id="bankDiff" role="group" aria-label="Filter by difficulty"></div>
+            <div class="seg" id="bankStatus" role="group" aria-label="Filter by status"></div>
+          </div>
+        </div>
+        <div class="bank-list" id="bankList"></div>
+      </div>
+    </section>
+
+    <!-- ============ PROGRESS ============ -->
+    <section id="view-progress" class="view" hidden aria-labelledby="progressTitle">
+      <div class="view-head">
+        <div>
+          <h1 id="progressTitle" tabindex="-1">Progress</h1>
+          <p class="view-sub">Scores from your saved attempts.</p>
+        </div>
+        <button type="button" class="btn ghost small danger" id="clearBtn" hidden>
+          <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3" /></svg>
+          <span>Clear history</span>
+        </button>
+      </div>
+
+      <div class="notice" id="guestNotice" hidden>
+        <p>You're practicing as a guest, so this progress is saved only in this browser.</p>
+        <a class="btn primary small" href="#/register">Create an account to keep it</a>
+      </div>
+
+      <div class="sheet empty" id="progressEmpty" hidden>
+        <h2>No attempts yet</h2>
+        <p>Answer a question to see your scores, trends and weakest topics here.</p>
+        <a class="btn primary" href="#/practice">Start practicing</a>
+      </div>
+
+      <div class="sheet" id="progressData" hidden>
+        <dl class="statstrip" id="statStrip"></dl>
+        <section class="panel" aria-labelledby="trendTitle">
+          <h2 id="trendTitle">Score trend</h2>
+          <p class="section-note" id="trendNote"></p>
+          <div class="trend" id="trend"></div>
+        </section>
+        <section class="panel panel-wide" aria-labelledby="topicTitle">
+          <h2 id="topicTitle">By topic</h2>
+          <p class="section-note">Average overall score per topic.</p>
+          <ul class="topic-bars" id="topicBars"></ul>
+        </section>
+        <section class="panel panel-wide" aria-labelledby="historyTitle">
+          <h2 id="historyTitle">Recent attempts</h2>
+          <ol class="history" id="historyList"></ol>
+        </section>
+      </div>
+    </section>
+
+    <!-- ============ LOG IN ============ -->
+    <section id="view-login" class="view" hidden aria-labelledby="loginTitle">
+      <div class="sheet auth">
+        <div class="auth-main">
+          <h1 id="loginTitle" tabindex="-1">Log in</h1>
+          <p class="view-sub">Pick up where you left off. Your scores and saved answers are waiting.</p>
+          <form class="form" id="loginForm" novalidate>
+            <div class="form-field">
+              <label for="loginEmail">Email</label>
+              <input id="loginEmail" name="email" type="email" autocomplete="username" required pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+                     data-missing="Enter your email address." data-invalid="Enter a valid email address, such as name@example.com." />
+              <p class="field-error" data-for="email"></p>
+            </div>
+            <div class="form-field">
+              <label for="loginPassword">Password</label>
+              <div class="password">
+                <input id="loginPassword" name="password" type="password" autocomplete="current-password" required
+                       data-missing="Enter your password." />
+                <button type="button" class="reveal" aria-pressed="false" aria-label="Show password">Show</button>
+              </div>
+              <p class="field-error" data-for="password"></p>
+            </div>
+            <p class="form-error" role="alert"></p>
+            <button type="submit" class="btn primary block" data-busy="Logging in…">Log in</button>
+          </form>
+          <p class="auth-switch">New to InterviewAI? <a href="#/register">Create an account</a></p>
+          <p class="auth-switch"><a href="#/practice">Continue as a guest</a></p>
+        </div>
+        <div class="auth-aside">
+          <ul class="benefits">
+            <li>Keep your scores and saved answers between visits and devices.</li>
+            <li>Practice you did as a guest moves into your account.</li>
+            <li>Your answers are visible only to you.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CREATE ACCOUNT ============ -->
+    <section id="view-register" class="view" hidden aria-labelledby="registerTitle">
+      <div class="sheet auth">
+        <div class="auth-main">
+          <h1 id="registerTitle" tabindex="-1">Create your account</h1>
+          <p class="view-sub">Save your attempts and track your progress. Anything you practiced as a guest is kept.</p>
+          <form class="form" id="registerForm" novalidate>
+            <div class="form-field">
+              <label for="registerName">Name</label>
+              <input id="registerName" name="name" type="text" autocomplete="name" required maxlength="60"
+                     data-missing="Enter your name." />
+              <p class="field-error" data-for="name"></p>
+            </div>
+            <div class="form-field">
+              <label for="registerEmail">Email</label>
+              <input id="registerEmail" name="email" type="email" autocomplete="email" required pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+                     data-missing="Enter your email address." data-invalid="Enter a valid email address, such as name@example.com." />
+              <p class="field-error" data-for="email"></p>
+            </div>
+            <div class="form-field">
+              <label for="registerPassword">Password</label>
+              <div class="password">
+                <input id="registerPassword" name="password" type="password" autocomplete="new-password" required minlength="8"
+                       aria-describedby="registerPasswordHint" data-missing="Choose a password." data-short="Use at least 8 characters." />
+                <button type="button" class="reveal" aria-pressed="false" aria-label="Show password">Show</button>
+              </div>
+              <p class="field-hint" id="registerPasswordHint">At least 8 characters.</p>
+              <p class="field-error" data-for="password"></p>
+            </div>
+            <p class="form-error" role="alert"></p>
+            <button type="submit" class="btn primary block" data-busy="Creating account…">Create account</button>
+          </form>
+          <p class="auth-switch">Already have an account? <a href="#/login">Log in</a></p>
+          <p class="auth-switch"><a href="#/practice">Continue as a guest</a></p>
+        </div>
+        <div class="auth-aside">
+          <blockquote class="sample">
+            Overfitting happens when a model learns the <mark class="hl">noise</mark> in its training data instead of
+            the underlying pattern, so it fails to <mark class="hl">generalize</mark> to new data.
+          </blockquote>
+          <p class="sample-caption">Every attempt ends with a model answer like this one, with the key concepts marked.</p>
+          <ul class="benefits">
+            <li>Keep your scores and saved answers between visits and devices.</li>
+            <li>Practice you did as a guest moves into your account.</li>
+            <li>Your answers are visible only to you.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ACCOUNT ============ -->
+    <section id="view-account" class="view" hidden aria-labelledby="accountTitle">
+      <div class="view-head">
+        <div>
+          <h1 id="accountTitle" tabindex="-1">Account</h1>
+          <p class="view-sub" id="accountSub"></p>
+        </div>
+        <button type="button" class="btn secondary small" id="logoutBtn">Log out</button>
+      </div>
+      <div class="sheet">
+        <section class="panel" aria-labelledby="profileTitle">
+          <h2 id="profileTitle">Profile</h2>
+          <dl class="profile" id="profile"></dl>
+        </section>
+        <section class="panel panel-wide" aria-labelledby="passwordTitle">
+          <h2 id="passwordTitle">Change password</h2>
+          <form class="form form-narrow" id="passwordForm" novalidate>
+            <div class="form-field">
+              <label for="currentPassword">Current password</label>
+              <div class="password">
+                <input id="currentPassword" name="current" type="password" autocomplete="current-password" required
+                       data-missing="Enter your current password." />
+                <button type="button" class="reveal" aria-pressed="false" aria-label="Show password">Show</button>
+              </div>
+              <p class="field-error" data-for="current"></p>
+            </div>
+            <div class="form-field">
+              <label for="newPassword">New password</label>
+              <div class="password">
+                <input id="newPassword" name="new" type="password" autocomplete="new-password" required minlength="8"
+                       aria-describedby="newPasswordHint" data-missing="Choose a new password." data-short="Use at least 8 characters." />
+                <button type="button" class="reveal" aria-pressed="false" aria-label="Show password">Show</button>
+              </div>
+              <p class="field-hint" id="newPasswordHint">At least 8 characters.</p>
+              <p class="field-error" data-for="new"></p>
+            </div>
+            <p class="form-error" role="alert"></p>
+            <button type="submit" class="btn primary" data-busy="Updating…">Update password</button>
+          </form>
+        </section>
+        <section class="panel panel-wide" aria-labelledby="deleteTitle">
+          <h2 id="deleteTitle">Delete account</h2>
+          <p class="section-note">Permanently delete your account and every attempt saved to it. This can't be undone.</p>
+          <button type="button" class="btn ghost small danger panel-action" id="deleteAccountBtn">Delete account</button>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="footer-brand">InterviewAI</p>
+      <p>Your answers are saved privately to your account, or to this browser when you practice as a guest.</p>
+    </div>
+  </footer>
+
+  <dialog class="dialog" id="confirmDialog" aria-labelledby="confirmTitle">
+    <form method="dialog">
+      <h2 id="confirmTitle">Clear all practice history?</h2>
+      <p class="dialog-text" id="confirmText">This deletes every saved attempt and score. It can't be undone.</p>
+      <div class="dialog-actions">
+        <button type="submit" class="btn secondary" value="cancel" autofocus>Cancel</button>
+        <button type="submit" class="btn danger-solid" value="confirm">Clear history</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog class="dialog" id="deleteDialog" aria-labelledby="deleteDialogTitle">
+    <form class="form" id="deleteForm" novalidate>
+      <h2 id="deleteDialogTitle">Delete your account?</h2>
+      <p class="dialog-text">This permanently deletes your account and every attempt saved to it. Enter your password to confirm.</p>
+      <div class="form-field">
+        <label for="deletePassword">Password</label>
+        <input id="deletePassword" name="password" type="password" autocomplete="current-password" required
+               data-missing="Enter your password to confirm." />
+        <p class="field-error" data-for="password"></p>
+      </div>
+      <p class="form-error" role="alert"></p>
+      <div class="dialog-actions">
+        <button type="button" class="btn secondary" data-close>Cancel</button>
+        <button type="submit" class="btn danger-solid" data-busy="Deleting…">Delete account</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div class="tooltip" id="tooltip" role="tooltip" hidden></div>
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

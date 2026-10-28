@@ -1,0 +1,2195 @@
+[
+  {
+    "id": 1,
+    "category": "HR",
+    "difficulty": "Easy",
+    "question": "Tell me about yourself.",
+    "keywords": [
+      "education|graduat|degree|student|studied",
+      "experience|internship|intern",
+      "skills|skill|Python|Java|SQL|C++",
+      "achievement|achiev|accomplish|built|delivered|developed|created",
+      "goal|looking for|aim|aspir|want to",
+      "role|position|opportunity|this job"
+    ],
+    "model_answer": "I'm a recent computer science graduate who enjoys building reliable backend systems. Most recently, I completed a six-month backend developer internship at a logistics software company. There, I built and maintained REST APIs in Python and SQL that more than 40 client companies used to track their shipments. Every feature I delivered went through code review, automated tests and a production release, so I learned how real teams ship software. Before that, my final-year project team created a machine learning model that detects crop diseases from leaf photos, and I developed the API that serves its predictions. Outside class, I helped run my college coding club and competed in hackathons, which sharpened my skills in learning fast and working to deadlines. Now I'm looking for a backend role where I can ship production features, learn from experienced engineers and grow into owning services end to end. That's why this position at [Company] stands out to me.",
+    "tips": [
+      "Use present, past, future: who you are now, what you have done, and why this role is your next step.",
+      "Pick two or three highlights with specific details or numbers instead of walking through your whole resume.",
+      "Keep it to about one minute and finish by linking your goals to this role."
+    ],
+    "mistakes": [
+      "Reciting your resume line by line instead of choosing the most relevant highlights.",
+      "Opening with hometown, family or hobbies that have nothing to do with the job.",
+      "Ending without a clear goal, so the interviewer doesn't know why you're applying."
+    ],
+    "follow_ups": [
+      "Which of the experiences you mentioned are you most proud of, and why?",
+      "What kind of role or team are you looking for next?"
+    ]
+  },
+  {
+    "id": 2,
+    "category": "HR",
+    "difficulty": "Easy",
+    "question": "Why do you want to work for our company?",
+    "keywords": [
+      "mission|vision|purpose",
+      "product|service|platform",
+      "culture|values|value",
+      "skills|skill|experience",
+      "contribute|contribut|add value",
+      "growth|grow|learn"
+    ],
+    "model_answer": "I have three reasons for wanting to join [Company]. First, the mission. I share your focus on [the company's mission in your own words], and I can see it in [specific product or initiative], which feels reliable and simple for users. That simplicity takes serious backend engineering behind the scenes. Second, the role fits my skills. During my internship, I built REST APIs in Python and SQL for a logistics platform, and this team builds similar services, so I can contribute quickly. Third, growth and culture. I want to start my career on a team that invests in mentoring and code reviews, and the engineers I spoke to here described exactly that. In short, I believe in what you're building, I have the skills to help build it, and I want to grow with a team that cares about doing it well.",
+    "tips": [
+      "Give three reasons: something specific about the company, how the role fits your skills, and how you will grow.",
+      "Name one concrete detail from your research, such as a product, a recent launch or an engineering practice.",
+      "Balance what you will gain with what you will contribute, so the fit sounds mutual."
+    ],
+    "mistakes": [
+      "Giving generic praise, such as 'it's a great company', that could apply to any employer.",
+      "Focusing on salary, perks or brand name instead of the work itself.",
+      "Talking only about what you will gain, with nothing about what you offer."
+    ],
+    "follow_ups": [
+      "Which of our products have you used, and what would you improve?",
+      "What other companies are you considering, and why?"
+    ]
+  },
+  {
+    "id": 3,
+    "category": "HR",
+    "difficulty": "Medium",
+    "question": "What are your strengths and weaknesses?",
+    "keywords": [
+      "strength|strong",
+      "weakness|weak|area to improve",
+      "example|for instance|instance",
+      "improvement|improv|working on",
+      "feedback|mentor",
+      "result|outcome|impact"
+    ],
+    "model_answer": "My biggest strength is systematic debugging. For example, in my final-year project, our model training crashed after about two hours every night, and we kept losing a full day of work. Instead of guessing, I logged memory use at each step and saw it climbing with every batch. I traced the leak to our data loader, which kept every image it loaded in memory. I resolved it by loading images from disk only when needed, and training ran overnight without a single crash after that. My weakness is that I used to stay stuck on problems too long before asking for help, because I wanted to solve everything myself. During my internship, I improved this with a simple rule: if I'm blocked for 45 minutes, I write down what I've tried and ask a teammate. As a result, I reduced the time I spend blocked, and my mentor's feedback in my final review confirmed the change. I still remind myself of the rule, but it no longer slows me down.",
+    "tips": [
+      "Give one strength with proof, then one real weakness with the steps you are taking to fix it.",
+      "Avoid disguised strengths such as 'I'm a perfectionist'; interviewers hear them often and find them evasive.",
+      "Choose a weakness that isn't central to the job, and show evidence of progress, such as feedback."
+    ],
+    "mistakes": [
+      "Claiming you have no weaknesses, which sounds unaware or dishonest.",
+      "Naming a weakness that is core to the role with no plan to fix it.",
+      "Listing strengths as adjectives, such as hardworking, without a single example to prove them."
+    ],
+    "follow_ups": [
+      "How would your teammates or mentor describe you?",
+      "What is one skill you are actively working to improve right now?"
+    ]
+  },
+  {
+    "id": 4,
+    "category": "Behavioral",
+    "difficulty": "Medium",
+    "question": "Describe a time you faced a difficult challenge in a team project and how you handled it.",
+    "keywords": [
+      "challenge|challeng|obstacle|problem|issue|difficult|setback|struggl",
+      "collaboration|collaborat|together|teamwork|teammate|split the work|divided the work",
+      "communication|communicat|check-in",
+      "solution|solv|plan|fix|resolv|approach",
+      "result|outcome|improved",
+      "learned|learn|lesson"
+    ],
+    "model_answer": "During my final-year project, my team of four built a model that detects crop diseases from leaf photos. Six weeks before our final demo, we hit a serious challenge. The model scored 92% on our test set but only about 60% on photos we took ourselves in real fields, because all our training images had plain lab backgrounds. Our goal was a model that worked in real conditions, but the team disagreed on whether to start over or present only the lab results. First, I analyzed the errors and showed the team that most failures came from cluttered backgrounds and poor lighting. Then I proposed a two-part solution that the whole team could work on together. Two teammates added a public dataset of field photos, while I implemented augmentation with random backgrounds, blur and brightness changes. I also organized two short check-ins a week, so communication stayed clear and blockers surfaced early. As a result, field accuracy improved from 60% to 84%, and we delivered the demo on time. I learned to test on real-world data early, and that a clear plan unites a divided team.",
+    "tips": [
+      "Use STAR: set the scene briefly, state the challenge, spend most time on your actions, then quantify the result.",
+      "Show how you brought the team along through communication and shared decisions, not by working around them.",
+      "Choose a challenge with real stakes, such as a deadline or quality problem, not a minor inconvenience."
+    ],
+    "mistakes": [
+      "Blaming teammates instead of explaining what you did to move the team forward.",
+      "Spending most of the answer on the situation and rushing through your actions.",
+      "Ending without a measurable result or a lesson learned."
+    ],
+    "follow_ups": [
+      "What would you do differently if you faced the same challenge again?",
+      "How did you handle teammates who disagreed with your plan?"
+    ]
+  },
+  {
+    "id": 5,
+    "category": "Behavioral",
+    "difficulty": "Medium",
+    "question": "Tell me about a time you showed leadership.",
+    "keywords": [
+      "leadership|lead|led|leader",
+      "decision|decid",
+      "delegation|delegat|assign|owner",
+      "responsibility|responsib|accountab",
+      "motivate|motivat|encourag|inspir|morale",
+      "outcome|result"
+    ],
+    "model_answer": "In my final year, I was the events coordinator of my college coding club, and we decided to host our first inter-college coding contest. I was responsible for delivering it in four weeks, and I managed six volunteers who were also preparing for exams. First, I split the work into four tracks: problem setting, testing, platform and publicity. I gave each track an owner based on their strengths, so everyone had clear responsibility. Then I organized a 15-minute weekly meeting and a shared task board, which surfaced blockers early. Two days before the event, our self-hosted judge crashed during a trial run, and the team started to panic. I decided to move the contest to a hosted judging platform and led the overnight migration of all twelve problems. I also kept the team motivated by giving everyone a clear role for the event day. As a result, the contest ran without downtime for 220 students from 15 colleges, and the club made it an annual event. I learned that leadership is mostly about clear ownership and removing blockers for others.",
+    "tips": [
+      "Pick a story where you set direction for others, then show your key decisions, how you involved people and the outcome.",
+      "Show initiative, delegation and support for teammates; leadership doesn't require a formal title.",
+      "Include one hard moment, such as a setback or disagreement, and the decision you made."
+    ],
+    "mistakes": [
+      "Describing yourself as a boss giving orders, without showing how you supported others.",
+      "Saying 'we' throughout, so the interviewer can't tell what you personally did.",
+      "Choosing a story with no obstacle, so there is no real leadership decision."
+    ],
+    "follow_ups": [
+      "How did you handle a team member who wasn't contributing?",
+      "What would you do differently as a leader next time?"
+    ]
+  },
+  {
+    "id": 6,
+    "category": "Behavioral",
+    "difficulty": "Medium",
+    "question": "Describe a time you failed. What did you learn?",
+    "keywords": [
+      "failure|fail",
+      "mistake|error|wrong|misjudg|underestimat|overlook",
+      "responsibility|responsib|owned|ownership|accountab",
+      "learned|learn|lesson",
+      "improvement|improv|changed|change",
+      "next time|since then|differently|from then on|going forward"
+    ],
+    "model_answer": "During my first hackathon, in my second year, my team of three set out to build a campus lost-and-found app in 24 hours. I was responsible for the backend API and for connecting it to the front end. We each built our parts separately, and I planned to integrate everything in the last four hours. That was my mistake. When we finally connected the pieces, the data formats didn't match, the login flow broke and we ran out of time. We failed to submit a working demo, so the judges saw only our slides. When we talked it through afterwards, I owned the failure, because integration was my job and I had left it too late. Then I decided to change how I work. Since then, I start every project with a thin end-to-end version, agree on API formats early and integrate every few hours. At my next hackathon, we delivered a working skeleton by hour six and placed third out of 30 teams. I learned that early integration reduces risk far more than extra polish does.",
+    "tips": [
+      "Choose a real failure you caused, own it in one sentence, then spend most of the answer on what changed.",
+      "Show evidence that the lesson stuck, such as a later project where your new approach worked.",
+      "Pick a genuine but recoverable failure, not a disaster or a disguised success."
+    ],
+    "mistakes": [
+      "Picking a fake failure, such as 'I worked too hard', which seems evasive.",
+      "Blaming teammates, tools or bad luck instead of owning your part.",
+      "Dwelling on the failure and never explaining what you learned or changed."
+    ],
+    "follow_ups": [
+      "How do you react when a teammate's mistake affects your work?",
+      "What would you do if a similar failure affected a real client?"
+    ]
+  },
+  {
+    "id": 7,
+    "category": "Machine Learning",
+    "difficulty": "Easy",
+    "question": "Explain the difference between supervised and unsupervised machine learning.",
+    "keywords": [
+      "labeled data|labelled data|labeled|labelled|labels",
+      "unlabeled|unlabelled|without labels",
+      "classification|classify|classifier",
+      "regression",
+      "clustering|cluster|k-means|k means",
+      "dimensionality reduction|PCA|principal component"
+    ],
+    "model_answer": "Supervised learning trains a model on labeled data, where every input comes with the correct output, so the model learns to map features to a target. Its two main tasks are classification, which predicts a category, and regression, which predicts a continuous value. For example, a spam filter trained on emails already marked as spam or not spam is supervised classification. Unsupervised learning works with unlabeled data and discovers structure on its own, such as groups or hidden patterns. Common techniques are clustering, such as k-means for customer segmentation, and dimensionality reduction, such as PCA. Because supervised learning has ground truth, we can measure performance directly on a held-out test set. However, labels are expensive to collect, while unsupervised results are harder to evaluate because there is no correct answer to compare against. As a result, I choose supervised learning when there is a clear target and enough labeled data, and unsupervised learning for exploration, segmentation or anomaly detection.",
+    "tips": [
+      "Define each approach, then contrast them on the data they need, their typical tasks and one example each.",
+      "Name both supervised tasks, classification and regression, and two unsupervised techniques such as clustering and PCA.",
+      "Close with when you would choose each, considering labeling cost and how easy evaluation is."
+    ],
+    "mistakes": [
+      "Calling clustering a classification task because both put data points into groups.",
+      "Forgetting regression, as if supervised learning only means classification.",
+      "Claiming unsupervised models need no evaluation at all."
+    ],
+    "follow_ups": [
+      "How would you evaluate a clustering model when there are no labels?",
+      "Where do semi-supervised and self-supervised learning fit between these two?"
+    ]
+  },
+  {
+    "id": 8,
+    "category": "Machine Learning",
+    "difficulty": "Medium",
+    "question": "What is overfitting and how can you prevent it?",
+    "keywords": [
+      "generalize|generalise|generaliz|generalis|unseen data|new data",
+      "validation|test set|test data|held-out|held out",
+      "regularization|regularisation|regulariz|regularis|L1|L2|weight decay",
+      "cross-validation|cross validation|k-fold|k fold",
+      "dropout|drop out",
+      "early stopping|stopping early|stop early|stop training early|stops training early|stopped training early",
+      "more data|data augmentation|augmentation|augment"
+    ],
+    "model_answer": "Overfitting happens when a model learns the noise and quirks of its training data instead of the underlying pattern, so it fails to generalize to new data. The classic sign is a large gap between training and validation performance, for example 99% training accuracy but only 75% validation accuracy. It usually comes from a model that is too complex for the amount of data available. To prevent it, first get more data or use data augmentation, because more varied examples make memorization harder. Next, simplify the model or add regularization, such as L1 or L2 penalties that shrink the weights. For neural networks, dropout is standard, and early stopping halts training once validation loss stops improving. For tree models, limiting depth or pruning works well. In addition, use cross-validation to estimate generalization reliably and to tune hyperparameters without touching the test set. However, too much regularization causes underfitting, so the goal is the point where validation error is lowest.",
+    "tips": [
+      "Define the problem, explain how you would detect it, then group the prevention techniques into clear categories.",
+      "Describe the gap between training and validation scores with concrete numbers to show you can diagnose it.",
+      "Mention the opposite failure, underfitting, and that regularization strength is tuned on validation data."
+    ],
+    "mistakes": [
+      "Listing techniques without explaining how to detect overfitting in the first place.",
+      "Tuning hyperparameters on the test set, which leaks information and hides overfitting.",
+      "Assuming more epochs or a bigger model always improves results."
+    ],
+    "follow_ups": [
+      "What is the difference between L1 and L2 regularization?",
+      "How does dropout behave differently during training and inference?"
+    ]
+  },
+  {
+    "id": 9,
+    "category": "Web & APIs",
+    "difficulty": "Easy",
+    "question": "How does a REST API work, and what are common HTTP methods?",
+    "keywords": [
+      "resources|resource|endpoint|URL|URI",
+      "GET",
+      "POST",
+      "PUT|PATCH",
+      "DELETE",
+      "stateless|state-less|state less",
+      "status codes|status code|response code"
+    ],
+    "model_answer": "REST, or representational state transfer, is an architectural style for designing APIs, most commonly over HTTP. Everything is modeled as a resource with its own URL, such as /orders/42, and clients act on it with standard HTTP methods. GET reads a resource, POST creates one, PUT replaces it, PATCH updates part of it, and DELETE removes it. GET, PUT and DELETE are idempotent, meaning that repeating a request has the same effect as sending it once, while POST is not. REST is also stateless, so every request carries everything the server needs, such as an authentication token, and the server keeps no client session between requests. As a result, any server can handle any request, which makes scaling easy. Data is usually exchanged as JSON, and status codes report the outcome. For example, a POST to /orders returns 201 Created with the new order's URL, while a GET for a missing order returns 404 Not Found. REST is simple and cacheable, although clients can over-fetch data.",
+    "tips": [
+      "Explain the core idea first, then walk through each method with its purpose and one concrete request.",
+      "Mention idempotency: GET, PUT and DELETE are idempotent, while POST is not.",
+      "Explain why statelessness helps scaling, and name a few status codes such as 201 and 404."
+    ],
+    "mistakes": [
+      "Using GET requests to change data, which breaks caching and safety expectations.",
+      "Confusing PUT with PATCH, or calling POST idempotent.",
+      "Saying stateless means the server stores no data at all, rather than no client session."
+    ],
+    "follow_ups": [
+      "How would you version a REST API?",
+      "When would you choose GraphQL or gRPC instead of REST?"
+    ]
+  },
+  {
+    "id": 10,
+    "category": "Machine Learning",
+    "difficulty": "Easy",
+    "question": "What is NLP and where is it used?",
+    "keywords": [
+      "natural language|human language",
+      "tokenization|tokenisation|tokeniz|tokenis|tokens",
+      "embeddings|embedding|vectors|word vectors",
+      "sentiment analysis|sentiment",
+      "chatbots|chatbot|chat bot|virtual assistant",
+      "translation|translate",
+      "transformers|transformer|large language model|LLM"
+    ],
+    "model_answer": "NLP, or natural language processing, is the branch of artificial intelligence that lets computers understand, analyze and generate human language, in both text and speech. A typical pipeline starts with tokenization, which splits text into words or subword pieces. Then each token is mapped to a numeric vector called an embedding, so similar meanings get similar vectors. Next, a model learns from these representations to perform a task. Earlier systems relied on hand-written rules and statistical models, but today most NLP is built on transformers, including the large language models behind modern assistants. It is used in sentiment analysis of product reviews, chatbots, machine translation, speech recognition, search, spam filtering and summarization. For example, in my final-year project I built a sentiment classifier that labeled customer reviews as positive or negative. The main challenges are ambiguity, sarcasm and context, because the same word can mean different things. In addition, large models are expensive to run and can hallucinate false answers.",
+    "tips": [
+      "Give a crisp definition, outline how it works step by step, then list real applications with one example.",
+      "Show you know the modern approach, transformers and large language models, not only rule-based systems.",
+      "Ground it in a project, such as a sentiment classifier, and name one real challenge."
+    ],
+    "mistakes": [
+      "Listing applications only, with no explanation of how text becomes something a model can process.",
+      "Describing NLP as only chatbots, ignoring search, translation, summarization and speech.",
+      "Treating large language models as always correct, without mentioning hallucinations or evaluation."
+    ],
+    "follow_ups": [
+      "What is the difference between stemming and lemmatization?",
+      "How do word embeddings capture the meaning of words?"
+    ]
+  },
+  {
+    "id": 11,
+    "category": "Situational",
+    "difficulty": "Medium",
+    "question": "You disagree with your manager's technical approach. What do you do?",
+    "keywords": [
+      "listen|listening",
+      "evidence|data|benchmark|prototype",
+      "privately|private|one-on-one|one on one",
+      "trade-offs|trade-off|tradeoff|trade off",
+      "respectfully|respectful",
+      "commit|support the decision"
+    ],
+    "model_answer": "First, I would listen carefully and ask questions to understand my manager's reasoning, because they often have context I lack, such as deadlines, budget or long-term plans. Next, I would test my own concern against evidence. For example, I could build a small prototype or run a quick benchmark comparing both approaches. Then I would ask for a short one-on-one conversation and raise the point privately and respectfully, not in front of the whole team. I would frame it around shared goals, such as performance, maintainability and delivery risk, and lay out the trade-offs of each option instead of arguing that my way is better. If the evidence supports my view, we can adjust the plan or agree on a compromise, such as a time-boxed trial. If my manager still prefers the original approach, I would commit to it fully and help it succeed. Finally, I would note the risk I raised in our design document, so the team can revisit it quickly if problems appear later.",
+    "tips": [
+      "Walk through your steps in order, from understanding their view to what happens after the decision.",
+      "Show you would disagree privately and back your view with evidence, such as a benchmark or prototype.",
+      "Make clear you will fully commit once the decision is made, even if it goes against you."
+    ],
+    "mistakes": [
+      "Saying you would simply follow orders and never raise the concern.",
+      "Challenging the manager in a team meeting or making the disagreement personal.",
+      "Insisting on your approach without data or without considering the manager's context."
+    ],
+    "follow_ups": [
+      "What would you do if the approach you disagreed with later caused problems?",
+      "Can you describe a time you changed someone's mind using data?"
+    ]
+  },
+  {
+    "id": 12,
+    "category": "Situational",
+    "difficulty": "Medium",
+    "question": "How do you prioritize when you have multiple deadlines at once?",
+    "keywords": [
+      "impact|business impact",
+      "urgency|urgent",
+      "dependencies|dependency|depends|blocks|blocking",
+      "estimate|estimation|estimating",
+      "communicate|communication",
+      "adjust|re-plan|replan|review the plan"
+    ],
+    "model_answer": "First, I would list every task with its deadline and who depends on it, so I can see the full picture instead of reacting to whoever asks loudest. Next, I would rank the tasks by impact and urgency. Work that blocks teammates or affects a release goes first, because delays there multiply. Then I would estimate how long each task will take and break large tasks into smaller pieces that fit into my calendar. If the estimates show I cannot meet every deadline, I would communicate early with my manager or the stakeholders, explain the conflict, and ask which priority matters most to the business. For example, I can propose moving an internal report by two days to protect a customer-facing fix. Finally, I would review the plan each morning, track progress, and adjust it when a new urgent request arrives, making sure everyone affected knows about the change.",
+    "tips": [
+      "Describe a repeatable method in order, from capturing the work to reviewing your plan.",
+      "Name your ranking criteria explicitly, such as business impact, urgency and what blocks other people.",
+      "Show you raise conflicts early and let your manager or stakeholders choose between the trade-offs."
+    ],
+    "mistakes": [
+      "Claiming you will simply work longer hours to finish everything.",
+      "Ranking tasks only by due date and ignoring impact or dependencies.",
+      "Waiting until a deadline is missed before telling anyone."
+    ],
+    "follow_ups": [
+      "What do you do when two stakeholders both say their task is the top priority?",
+      "How do you estimate how long a task will take?"
+    ]
+  },
+  {
+    "id": 13,
+    "category": "HR",
+    "difficulty": "Easy",
+    "question": "Where do you see yourself in five years?",
+    "keywords": [
+      "learning|learn",
+      "skills|skill|expertise|expert",
+      "ownership|own|responsibilit",
+      "leadership|lead|mentor",
+      "growth|grow",
+      "role|position|company"
+    ],
+    "model_answer": "In five years, I see myself as a strong backend engineer who owns important services and helps newer engineers grow. In my first year or two, my goal is to learn your systems deeply, deliver reliable features and build solid skills in system design, testing and production support. After that, I want to take ownership of a larger service or project, lead its design and become someone the team trusts with hard problems. I'm also interested in the space where backend and machine learning meet, such as data pipelines and model-serving APIs. My final-year project, where I built the API for our model, showed me how much I enjoy that work. Finally, I'd like to mentor interns and new graduates, the way my internship mentor helped me. This role is the right first step on that path, because it offers real production experience and room to grow.",
+    "tips": [
+      "Describe a realistic path in stages, near term and longer term, and connect it to this role.",
+      "Focus on skills, ownership and impact rather than a specific job title or salary.",
+      "Show commitment; avoid hinting that you plan to leave soon for studies or another company."
+    ],
+    "mistakes": [
+      "Saying you want the interviewer's job, which can sound arrogant rather than ambitious.",
+      "Giving a vague answer such as 'wherever life takes me' with no direction.",
+      "Revealing plans to leave soon, such as studying abroad, which makes you a retention risk."
+    ],
+    "follow_ups": [
+      "What skills will you need to build to reach that goal?",
+      "How will you measure your progress over the next year?"
+    ]
+  },
+  {
+    "id": 14,
+    "category": "HR",
+    "difficulty": "Medium",
+    "question": "Why should we hire you?",
+    "keywords": [
+      "skills|skill",
+      "experience|internship",
+      "role|requirement|position|job description",
+      "contribute|contribut|add value",
+      "results|result|impact|delivered|shipped|achiev|improved",
+      "learning|learn"
+    ],
+    "model_answer": "You should hire me because I match what this role needs, and I can contribute from the first month. First, I have real backend experience. During my six-month internship, I built and delivered REST API features in Python and PostgreSQL that our customers used every day. By my third month, the team trusted me to handle client support tickets on my own. Second, I bring machine learning skills as well. In my final-year project, I worked on everything from preparing training data to serving the model through an API, so I can work comfortably with both data and backend teams. Third, I learn quickly and communicate early when something is unclear, so problems surface before they become delays. Together, that gives you someone who can take a task from design to production with little hand-holding and keep improving with the team.",
+    "tips": [
+      "Match two or three of the role's key needs, and prove each one with a short example.",
+      "Close with one sentence that sums up the specific value you will bring to the team.",
+      "Stay confident but humble, and never criticize other candidates or claim you are the best."
+    ],
+    "mistakes": [
+      "Repeating your resume without linking it to what the job requires.",
+      "Using empty adjectives such as hardworking or dedicated without any evidence.",
+      "Saying you need the job, which focuses on your needs instead of theirs."
+    ],
+    "follow_ups": [
+      "What makes you different from other candidates with similar experience?",
+      "What would you aim to accomplish in your first 90 days?"
+    ]
+  },
+  {
+    "id": 15,
+    "category": "HR",
+    "difficulty": "Medium",
+    "question": "What are your salary expectations?",
+    "keywords": [
+      "research|researched",
+      "range",
+      "market|industry",
+      "role|responsibilit|position",
+      "flexible|flexib|negotiab|open to",
+      "package|compensation|benefits|CTC"
+    ],
+    "model_answer": "I'd like to learn more about the role's responsibilities first, but I can share what my research shows. I looked at market data for similar entry-level backend roles in this city, using salary surveys, job postings and conversations with recent graduates, and the typical range is [range]. Given that I built and delivered production APIs in Python and SQL during my six-month internship, I'm comfortable with an offer within that range. That said, I'm flexible, because I'm looking at the whole package, not only the base salary. Learning opportunities, mentorship, benefits and the growth path matter a lot to me at this stage of my career. Could you share the budgeted range for this position? I'm confident we can agree on a number that works for both of us.",
+    "tips": [
+      "Research market pay for the role and location, then give a range and show you are flexible.",
+      "Confirm you are comfortable with the announced package in campus placements, where pay is usually fixed.",
+      "Mention the whole package, such as learning, benefits and growth, not only the base salary."
+    ],
+    "mistakes": [
+      "Naming a number with no research behind it, either far too high or far too low.",
+      "Refusing to answer at all, which can seem evasive or unprepared.",
+      "Giving a range whose lowest number you would not actually accept."
+    ],
+    "follow_ups": [
+      "Do you have any other offers we should know about?",
+      "Would you accept an offer at the lower end of that range?"
+    ]
+  },
+  {
+    "id": 16,
+    "category": "HR",
+    "difficulty": "Medium",
+    "question": "How do you handle stress and pressure?",
+    "keywords": [
+      "prioritize|priorit|prioritise",
+      "planning|plan|schedul|organiz|organis",
+      "break down|break|broke|split|smaller",
+      "communication|communicat|inform|update|heads-up|heads up",
+      "calm|focus|composed",
+      "example|for instance"
+    ],
+    "model_answer": "I handle pressure by turning it into a plan. First, I list everything that's due and prioritize by deadline and impact. Then I break the biggest task into small daily goals, so progress is visible and the work feels manageable. Next, I communicate early if something is at risk, instead of waiting until the last day. I also protect my sleep and a short daily walk, because I make worse decisions when I'm exhausted. For example, in my final year, my project demo, end-semester exams and part-time teaching assistant job all landed in the same three weeks. I planned each day the night before, swapped two grading shifts with another assistant and told my project supervisor early that one feature would be ready a week later than planned. As a result, I delivered the demo on time, kept my grades up and didn't miss a single grading deadline. Pressure still shows up, but a clear plan keeps me calm and focused.",
+    "tips": [
+      "Describe your method as two or three concrete habits, then prove it with one real example.",
+      "Show that pressure doesn't freeze you: plan, prioritize and raise risks early.",
+      "End with a result, such as a deadline met, to prove your method works."
+    ],
+    "mistakes": [
+      "Claiming you never feel stress, which sounds unrealistic.",
+      "Choosing an example where the pressure came from your own procrastination, with no lesson.",
+      "Listing generic coping tips without a real example from your own experience."
+    ],
+    "follow_ups": [
+      "Can you tell me about a time you missed a deadline despite planning?",
+      "How do you handle several urgent requests from different people at once?"
+    ]
+  },
+  {
+    "id": 17,
+    "category": "HR",
+    "difficulty": "Easy",
+    "question": "What motivates you?",
+    "keywords": [
+      "impact|difference",
+      "users|user|customer|client",
+      "problems|problem|challeng|solv",
+      "learning|learn|grow",
+      "teamwork|team|collaborat",
+      "example|for instance"
+    ],
+    "model_answer": "What motivates me most is solving real problems and seeing the impact on the people who use my work. For example, during my internship, I built a small alert that warned dispatchers when a shipment was running late. A week after it launched, one dispatcher told me it saved her team about an hour every morning, because they no longer checked delays by hand. That moment meant more to me than any grade. I'm also motivated by learning. I enjoy the point where a hard concept finally clicks, which is why I keep taking on unfamiliar problems at hackathons and in side projects. Finally, I do my best work on a team that sets high standards and gives honest feedback. This role brings all three together: real users, hard problems and room to grow.",
+    "tips": [
+      "Name one or two genuine motivators, show each with a specific example, then connect them to this role.",
+      "Choose motivators that fit the job, such as solving problems, learning or helping users.",
+      "Avoid making money, titles or perks your main motivator, even if they matter to you."
+    ],
+    "mistakes": [
+      "Giving a vague answer, such as 'success motivates me', with no example.",
+      "Naming motivators that clash with the role, such as working alone for a team job."
+    ],
+    "follow_ups": [
+      "What demotivates you, and how do you deal with it?",
+      "How do you stay motivated on a long or repetitive task?"
+    ]
+  },
+  {
+    "id": 18,
+    "category": "HR",
+    "difficulty": "Easy",
+    "question": "What do you know about our company?",
+    "keywords": [
+      "products|product|service|platform",
+      "customers|customer|user|client",
+      "recent news|recent|news|launch|announc",
+      "culture|values|mission|vision",
+      "research|researched|read about|I read|website",
+      "role|position|contribut|fit"
+    ],
+    "model_answer": "From my research, [Company] builds [main product and the customers it serves]. I read about your [recent product launch], and it stood out to me because shipping it well depends on fast, dependable backend services, which is the work I enjoy most. I also went through your careers page, engineering blog and recent interviews with your leaders. I noticed that your teams write design documents before building and run blameless reviews after incidents, which tells me you value learning over blame. Finally, I created an account and tested the product myself to see it from a customer's point of view. All of this makes me confident that your culture values quality and growth, and that's the environment I want to contribute to in this role.",
+    "tips": [
+      "Cover what the company does, something recent and what it values, then link it to your interest.",
+      "Research the website, recent news, engineering blog and job description, and try the product if you can.",
+      "Ask a current employee or alumnus about the team, and mention one insight that isn't on the homepage."
+    ],
+    "mistakes": [
+      "Reciting facts such as founding year and revenue without linking them to the role.",
+      "Guessing facts you aren't sure about instead of sticking to what you researched.",
+      "Only praising the brand, with nothing specific about products, customers or recent news."
+    ],
+    "follow_ups": [
+      "Who do you see as our main competitors, and how are we different?",
+      "Which of our products would you most want to work on, and why?"
+    ]
+  },
+  {
+    "id": 19,
+    "category": "HR",
+    "difficulty": "Medium",
+    "question": "What is your greatest professional achievement?",
+    "keywords": [
+      "achievement|achiev|accomplish",
+      "challenge|challeng|problem",
+      "ownership|owned|took ownership|responsib|led",
+      "result|outcome|reduced|increased|improved|saved",
+      "impact|user|customer|client",
+      "proud|pride"
+    ],
+    "model_answer": "My greatest professional achievement was fixing a slow shipment report during my backend internship. Operations staff at our client companies opened this report every morning, but it took about eight seconds to load and often timed out for large clients, which created daily support tickets. I took ownership of the problem. First, I profiled the endpoint and found a classic N+1 query problem: it ran a separate SQL query for every shipment instead of one query for the whole page. Then I rewrote it as a single query with a join, added a composite index on client and date, and introduced pagination for large results. I tested the change on a staging database with production-sized data and delivered the fix in two weeks. As a result, the report loaded in under 400 milliseconds, timeout tickets dropped by about 80%, and my team reused the same approach on two other endpoints. I'm proud of it because it solved a daily problem for real users and showed me how much impact careful database work can have.",
+    "tips": [
+      "Tell one achievement as a short story: the problem, your actions, a measurable result and why it matters.",
+      "Make your personal contribution clear by saying 'I', even when the work was a team effort.",
+      "Explain why you are proud of it, because that reveals what you value at work."
+    ],
+    "mistakes": [
+      "Choosing an achievement that is impressive but unrelated to the skills the role needs.",
+      "Describing the team's success without explaining what you personally did.",
+      "Giving no numbers, so the interviewer can't judge how big the impact was."
+    ],
+    "follow_ups": [
+      "What was the hardest part of that work, and how did you get past it?",
+      "What would you do differently if you tackled it again?"
+    ]
+  },
+  {
+    "id": 20,
+    "category": "HR",
+    "difficulty": "Easy",
+    "question": "Do you have any questions for us?",
+    "keywords": [
+      "role|position|day-to-day|day to day",
+      "success|succeed",
+      "team",
+      "challenge|challeng|problem",
+      "growth|grow|mentor|career|learn",
+      "next steps|next step|timeline|hiring process"
+    ],
+    "model_answer": "Yes, I have a few. First, what does success look like for someone in this role after the first six months? I'm asking because I want to understand how you measure impact, so I can focus on the right things from the start. Second, how do new engineers get onboarded, and who would I learn from day to day? I learn fastest with regular feedback, so I'm keen to know how mentoring and growth work on this team. Finally, what is the biggest technical challenge the team is working on this year? I'm curious about the problems I'd be helping to solve, and knowing them would help me prepare before I start. Thank you, and I'd also be glad to hear about the next steps in the process.",
+    "tips": [
+      "Prepare two or three open questions about the role, the team and the company's direction.",
+      "Add one sentence of context to each question, so it shows your research and priorities.",
+      "Save salary, leave and perks for the HR or offer stage rather than a technical round."
+    ],
+    "mistakes": [
+      "Saying 'No, you covered everything', which signals low interest.",
+      "Asking questions whose answers are on the company's homepage.",
+      "Asking only about salary, holidays or remote work in an early round."
+    ],
+    "follow_ups": [
+      "Is there anything else you would like us to know about you?",
+      "If you received an offer, what would help you decide?"
+    ]
+  },
+  {
+    "id": 21,
+    "category": "Behavioral",
+    "difficulty": "Medium",
+    "question": "Tell me about a time you had a conflict with a teammate. How did you resolve it?",
+    "keywords": [
+      "conflict|disagree|tension",
+      "listen|understand|perspective|point of view",
+      "privately|in private|one-on-one|one-to-one|in person|directly|sat down",
+      "agreement|agree|compromise|common ground|solution",
+      "relationship|trust",
+      "result|outcome|resolved|in the end",
+      "learned|learn|lesson"
+    ],
+    "model_answer": "Midway through my final-year project, a teammate was responsible for cleaning our image dataset, and he missed two deadlines in a row. My model training was blocked, and in one team meeting I spoke with frustration, which made the conflict worse. I needed to resolve it before it damaged the project and our friendship. So I asked to talk with him privately instead of in the group chat. I started by apologizing for my tone, and then I listened. He explained that the dataset had far more duplicates and mislabeled images than we had estimated, and he was embarrassed to admit he was stuck. Together, we agreed on a new split of the work. I built a script that flagged duplicate images automatically, and he focused on fixing the labels. We also set up short updates every two days, so nobody would be surprised again. As a result, we delivered the clean dataset in nine days instead of the three weeks we feared, and our working relationship improved. I learned to ask questions before assuming someone doesn't care.",
+    "tips": [
+      "Describe the disagreement neutrally, then walk through the conversation you had, the agreement you reached and the result.",
+      "Show that you listened to understand their side before you proposed a solution.",
+      "Choose a work disagreement rather than a personal feud, and never make the teammate the villain."
+    ],
+    "mistakes": [
+      "Blaming the teammate and presenting yourself as entirely right.",
+      "Claiming you have never had a conflict, which sounds unrealistic.",
+      "Escalating to a manager or professor before talking to the person directly."
+    ],
+    "follow_ups": [
+      "What would you have done if your teammate had refused to change?",
+      "How do you handle a disagreement with someone more senior than you?"
+    ]
+  },
+  {
+    "id": 22,
+    "category": "Behavioral",
+    "difficulty": "Easy",
+    "question": "Tell me about a time you had to learn something new quickly.",
+    "keywords": [
+      "learning|learn",
+      "quickly|quick|fast|deadline",
+      "documentation|docs|tutorial|course|resource|video",
+      "practice|hands-on|prototype|build|built",
+      "ask for help|asked|mentor|expert",
+      "focus|scope|priorit|essential|basics|fundamental",
+      "result|outcome"
+    ],
+    "model_answer": "At a 36-hour hackathon in my final year, my team planned a mobile app that helps students find free study rooms on campus. The day before, our front-end developer had to drop out, and I was the only one available to build the app. However, I had never used Flutter or Dart. I needed to learn fast enough to ship working screens within a day and a half. First, I narrowed the scope to what we needed: layouts, navigation, forms and HTTP calls to our Python API. Then I spent two hours on the official getting-started tutorial and built one complete screen, connected to the API, before adding anything else. When I got stuck on state management, I asked a mentor at the event for 15 minutes instead of searching for an hour. As a result, I built five working screens in under 30 hours, we delivered a demo that ran without a crash, and we finished in the top five of 50 teams. I learned that the fastest way to learn is to build the smallest working piece first.",
+    "tips": [
+      "Explain why speed mattered, then walk through your learning method step by step and what you delivered.",
+      "Show a deliberate strategy: narrow the scope, use official resources, build something small and ask experts.",
+      "Quantify the outcome, such as time to a first working result, to prove the method worked."
+    ],
+    "mistakes": [
+      "Saying you watched tutorials without showing what you built or delivered.",
+      "Choosing something trivial to learn, so there is no real challenge.",
+      "Forgetting to explain how you would apply the same method in this job."
+    ],
+    "follow_ups": [
+      "How do you decide what to learn first when everything is new?",
+      "How would you get up to speed on our tech stack in your first month?"
+    ]
+  },
+  {
+    "id": 23,
+    "category": "Behavioral",
+    "difficulty": "Medium",
+    "question": "Describe a time you went above and beyond what was expected.",
+    "keywords": [
+      "expectations|expect|assigned|asked to|requir",
+      "initiative|proactive|on my own|volunteer|took it upon",
+      "extra|beyond|additional",
+      "customer|client|user",
+      "result|outcome|impact",
+      "learned|learn|lesson"
+    ],
+    "model_answer": "Three months into my internship, I was assigned a ticket to fix a rounding bug in how delivery fees were calculated. The task was to fix it for new orders, and I did that in a day, with a test. That met the expectation, but I wanted to know how far the bug reached, so I went beyond the ticket on my own initiative. I used the git history to find the release that introduced the bug three weeks earlier, then wrote a SQL query to check every order since then. It found 214 orders across nine clients with wrong fees. I shared the findings with my mentor immediately, and with his approval, I developed a correction script that the finance team reviewed before we ran it. I also created a 'check historical impact' step in our bug ticket template. As a result, all 214 orders were corrected before the monthly invoices went out, so no client was billed incorrectly. I learned that my job is to solve the customer's problem, not only to close the ticket.",
+    "tips": [
+      "Make the expected baseline clear first, then show the extra step you chose and the impact it had.",
+      "Show judgment: going beyond means adding value with the right people informed, not skipping approval.",
+      "Quantify who benefited and how, such as customers protected, errors prevented or hours saved."
+    ],
+    "mistakes": [
+      "Describing ordinary duties or long hours as going above and beyond.",
+      "Taking risky action without telling your manager, which signals poor judgment.",
+      "Focusing on how hard you worked instead of the value you created."
+    ],
+    "follow_ups": [
+      "How did you balance the extra work with your assigned tasks?",
+      "When is it a bad idea to go beyond what was asked?"
+    ]
+  },
+  {
+    "id": 24,
+    "category": "Behavioral",
+    "difficulty": "Medium",
+    "question": "Tell me about a time you received critical feedback. How did you respond?",
+    "keywords": [
+      "feedback",
+      "listened|listen|openly|open-minded|defensive",
+      "thanked|thank|appreciat",
+      "clarify|clarif|asked|questions",
+      "changes made|change|improv|adjust",
+      "result|outcome",
+      "learned|learn|lesson"
+    ],
+    "model_answer": "In my first month as a backend intern, a senior engineer gave me blunt feedback on a pull request. He said it was over 800 lines, mixed three unrelated changes and had no tests, so nobody could review it safely. My first reaction was defensive, because I had spent two late nights on it. However, I listened to his reasoning and saw that the risk was real. I needed to change how I worked, not just fix this one pull request. So I thanked him and asked him to clarify what a good pull request looks like on our team. Then I split that work into three smaller pull requests, each with its own unit tests. I created a short checklist that I still use before every review request: one change, under 300 lines, tests included and a clear description. As a result, I reduced my review wait time from about three days to under one, and review comments fell by more than half. I learned to treat critical feedback as useful information, not a personal judgment.",
+    "tips": [
+      "Describe the feedback honestly, your first reaction, the concrete changes you made and the measurable result.",
+      "Admit a brief defensive reaction if you had one, then show how you moved past it.",
+      "Choose real criticism about your work, not trivial feedback or a disguised compliment."
+    ],
+    "mistakes": [
+      "Picking feedback you thought was unfair and spending the answer defending yourself.",
+      "Saying you accepted the feedback but giving no evidence that anything changed."
+    ],
+    "follow_ups": [
+      "How do you give critical feedback to a peer?",
+      "What do you do when you disagree with feedback you receive?"
+    ]
+  },
+  {
+    "id": 25,
+    "category": "Behavioral",
+    "difficulty": "Hard",
+    "question": "Describe a time you had to make a decision with incomplete information.",
+    "keywords": [
+      "decision|decid",
+      "information|data|evidence|facts",
+      "assumptions|assum",
+      "risk|trade-off|tradeoff|pros and cons",
+      "reversible|revers|revisit|adjust|roll back|rollback|fallback|backup plan",
+      "communication|communicat|document|update",
+      "result|outcome"
+    ],
+    "model_answer": "Near the end of my internship, I was building a CSV export of delivery records for our client dashboard, due for a client demo on Friday. On Wednesday, I realized the requirements didn't say whether to include cancelled deliveries, and the product manager who wrote them was away until Monday. I had to decide without the full picture. First, I separated what I knew from what I didn't. Then I analyzed the data: cancelled deliveries were about 15% of records, and two recent support tickets had asked for completed deliveries only. Including them risked confusing clients, while hiding them risked clients thinking data was missing. Next, I spent ten minutes with my team lead and proposed a middle path. We would exclude cancelled deliveries by default but add a filter to include them, because that matched the evidence and was easy to reverse. I documented the assumption in the pull request and sent the product manager a short note. As a result, we delivered the export on time, and when she returned, she kept the default and only renamed the filter. I learned to make reversible decisions quickly, state assumptions openly and revisit them when new information arrives.",
+    "tips": [
+      "Explain what you knew, what was missing, how you weighed the options and how you limited the risk.",
+      "Show that you gathered whatever data you could quickly, then chose a reversible option.",
+      "Make your assumptions explicit and say how you communicated them to the people affected."
+    ],
+    "mistakes": [
+      "Describing a lucky guess with no reasoning about risks or alternatives.",
+      "Making a big, irreversible decision alone without telling anyone affected.",
+      "Waiting for perfect information while the deadline passes, then calling that caution."
+    ],
+    "follow_ups": [
+      "What would you have done if the product manager had disagreed with your choice?",
+      "How do you decide when you have enough information to act?"
+    ]
+  },
+  {
+    "id": 26,
+    "category": "Behavioral",
+    "difficulty": "Hard",
+    "question": "Tell me about a time you persuaded others to adopt your idea.",
+    "keywords": [
+      "persuade|persuad|persuas|convinc",
+      "concerns|concern|objection|worr|resist|pushback|push back|skeptic|sceptic",
+      "listened|listen|understand",
+      "evidence|data|numbers|proof",
+      "pilot|trial|prototype|demo",
+      "benefits|benefit|value",
+      "adoption|adopt|buy-in|agreed|approv|accept"
+    ],
+    "model_answer": "In my second year, our college coding club's five project teams shared code through zip files and group chats, and every semester at least one team lost work. I wanted us to move to Git, with a shared repository for each team and pull-request reviews. My challenge was that I was a regular member with no authority, and the senior committee worried Git would scare away beginners. First, I listened to their concern instead of arguing, and it was fair: half our members were first-years. So I proposed a one-month pilot with one volunteer team rather than a club-wide rule. I created a one-page guide, organized a 30-minute Git workshop and led the pilot myself. In that month, the team lost no code and reviewed each other's work in 40 pull requests. Then I presented the benefits with that evidence, plus feedback from two first-years who said reviews helped them learn faster. As a result, the committee adopted the workflow for all five teams, and about 60 members made their first pull request that year. I learned that people adopt an idea when you address their real concern and let evidence do the persuading.",
+    "tips": [
+      "Describe who you needed to convince and why they resisted, the steps you took and the final outcome.",
+      "Use evidence, such as a small pilot or data, rather than repeating your opinion more forcefully.",
+      "Highlight influence without authority and how you adapted the idea after hearing objections."
+    ],
+    "mistakes": [
+      "Telling a story where you simply argued until people gave in.",
+      "Dismissing the other side's concerns or presenting them as foolish.",
+      "Leaving out whether the idea was adopted and what it achieved."
+    ],
+    "follow_ups": [
+      "Has an idea of yours ever been rejected, and how did you respond?",
+      "How would you persuade a senior engineer who disagrees with your technical approach?"
+    ]
+  },
+  {
+    "id": 27,
+    "category": "Behavioral",
+    "difficulty": "Medium",
+    "question": "Tell me about a time you improved a process or workflow.",
+    "keywords": [
+      "bottleneck|inefficien|manual|repetitive|slow|time-consuming|pain point",
+      "analysis|analyz|analys|measur|root cause",
+      "solution|automat|tool|script|checklist|template",
+      "adoption|adopt|buy-in|validat|rolled out|roll out",
+      "time saved|saved|reduced|faster|efficien|decreas",
+      "result|outcome|impact"
+    ],
+    "model_answer": "While working part-time as a teaching assistant for an introductory Python course with about 120 students, I was responsible for grading weekly programming assignments with two other assistants. We tested every submission manually, which took each of us about ten hours a week, and students waited a full week for feedback. I analyzed where our time went and found that most of it was spent running the same test inputs again and again. So I built an automated grader with pytest that ran a standard set of tests on every submission and produced a short report for each student. I worked with the course instructor to validate it on two past assignments before we used it live. We still reviewed code quality by hand, but only after the tests ran. As a result, we reduced grading time from about ten hours to three per assistant each week, and feedback reached students within two days instead of seven. The other assistants adopted it immediately, and the instructor kept it for the next semester. I learned to measure where time goes before changing a process.",
+    "tips": [
+      "Describe the old process and its cost, how you found the cause, what you changed and the measured impact.",
+      "Measure before and after using time, errors or cost, instead of saying it simply felt faster.",
+      "Explain how you got others to adopt the change, because a process only improves when people use it."
+    ],
+    "mistakes": [
+      "Describing the new tool in detail but never quantifying the improvement.",
+      "Changing a shared process alone without involving the people who use it.",
+      "Picking a small personal habit instead of a process that affected others."
+    ],
+    "follow_ups": [
+      "What would you do if people resisted the new process?",
+      "How did you make sure the improvement lasted after you left?"
+    ]
+  },
+  {
+    "id": 28,
+    "category": "Situational",
+    "difficulty": "Medium",
+    "question": "You realize you won't meet a deadline. What do you do?",
+    "keywords": [
+      "early|as soon as",
+      "estimate|re-estimate|remaining work",
+      "options|alternatives",
+      "scope",
+      "revised date|new date|timeline",
+      "responsibility|accountability|ownership"
+    ],
+    "model_answer": "First, I would raise it early, as soon as I am confident the date is at risk, because a warning two weeks ahead gives my manager options, while a surprise on the last day gives none. Before that conversation, I would re-estimate the remaining work so I can explain how far behind I am and why, for example an underestimated integration or a blocked dependency. Then I would come with options rather than only the problem. These could include reducing scope to deliver the most important features first, getting help from a teammate, or agreeing on a realistic revised date. I would explain the impact of each option and let my manager or the stakeholder decide. Next, I would take responsibility without making excuses and share progress updates more often until the work is delivered. Finally, after delivery, I would review what caused the slip, such as missing buffer time, so my future estimates improve.",
+    "tips": [
+      "Explain when you would speak up, what you would prepare first, and how you would follow through.",
+      "Bring options such as reduced scope, extra help or a new date, not just the bad news.",
+      "Show ownership by giving the real reason briefly, without blaming teammates or tools."
+    ],
+    "mistakes": [
+      "Staying silent and working overnight, hoping to catch up before anyone notices.",
+      "Announcing the delay on the due date with no plan or new estimate.",
+      "Blaming other people instead of explaining the cause and the recovery plan."
+    ],
+    "follow_ups": [
+      "How would you prevent the same delay on your next project?",
+      "What if your manager insists the original deadline cannot move?"
+    ]
+  },
+  {
+    "id": 29,
+    "category": "Situational",
+    "difficulty": "Medium",
+    "question": "A teammate isn't contributing their share of the work. How do you handle it?",
+    "keywords": [
+      "privately|private|one-on-one|one on one",
+      "specific|facts|examples",
+      "listen|listening",
+      "support|help|pairing",
+      "ownership|owners|task tracker",
+      "escalate|escalation"
+    ],
+    "model_answer": "First, I would make sure I understand the situation, because the cause is often not laziness. The teammate may be stuck, overloaded with other work, or unclear about what is expected. Next, I would talk to them privately in a one-on-one conversation, not in the group chat. I would stay specific and stick to facts, for example that two tasks assigned last week have not moved, and then listen to their side. If they are blocked, I would offer support, such as pairing on the difficult part or sharing documentation. Then we would agree on clear ownership, with small tasks, owners and dates in our task tracker, so progress is visible to everyone. I would check in again after a few days. Finally, if nothing changes, I would escalate to our manager or project lead, focusing on the impact on the deadline rather than on blame.",
+    "tips": [
+      "Lay out what you would do first, next and last, and how you would communicate at each step.",
+      "Raise it privately with specific facts, and listen for blockers before assuming bad intent.",
+      "Show you escalate only after a direct conversation, focusing on project impact rather than blame."
+    ],
+    "mistakes": [
+      "Quietly doing the teammate's work yourself, which hides the problem.",
+      "Complaining to the manager or the group before speaking to the person.",
+      "Using vague accusations instead of concrete examples of missed tasks."
+    ],
+    "follow_ups": [
+      "What would you do if the teammate became defensive when you raised it?",
+      "How would you handle it if the teammate were more senior than you?"
+    ]
+  },
+  {
+    "id": 30,
+    "category": "Situational",
+    "difficulty": "Medium",
+    "question": "You're given a task with unclear requirements. How do you proceed?",
+    "keywords": [
+      "clarifying questions|clarify|clarification",
+      "stakeholder|stakeholders|product owner",
+      "assumptions|assumption",
+      "acceptance criteria|acceptance",
+      "prototype|mockup|mock-up|draft",
+      "document|write down|in writing",
+      "feedback|iterate|iteration"
+    ],
+    "model_answer": "First, I would gather what I already know from the ticket, earlier discussions and similar features, so my questions are specific. Then I would set up a short meeting with the stakeholder or product owner and ask clarifying questions. These cover who the user is, what problem we are solving, which edge cases matter, and how we will know the task is done. Next, I would write down the answers and my remaining assumptions as acceptance criteria and share them in writing for confirmation. This record prevents arguments later about what was agreed. If some details are still open, I would not wait idle. Instead, I would build a small prototype of the parts that are clear and show it early, because people often discover what they want when they see something concrete. Finally, I would gather feedback, update the acceptance criteria, and iterate in short cycles until the requirements are stable.",
+    "tips": [
+      "Explain how you would reduce the uncertainty step by step and confirm your understanding.",
+      "Mention the specific questions you would ask, such as who the user is and what done looks like.",
+      "Show that you confirm assumptions in writing and share early drafts for feedback."
+    ],
+    "mistakes": [
+      "Guessing silently and building the whole feature on untested assumptions.",
+      "Waiting idle for perfect requirements instead of progressing on the parts that are clear.",
+      "Asking vague questions such as 'what do you want?' without any preparation."
+    ],
+    "follow_ups": [
+      "What would you do if the stakeholder keeps changing the requirements?",
+      "How do you write good acceptance criteria?"
+    ]
+  },
+  {
+    "id": 31,
+    "category": "Situational",
+    "difficulty": "Hard",
+    "question": "You discover a critical bug right before a release. What do you do?",
+    "keywords": [
+      "reproduce|reproduc",
+      "severity|impact",
+      "notify|inform|escalate|alert",
+      "feature flag|feature toggle|roll back|rollback",
+      "delay|postpone|hold the release",
+      "regression tests|regression test|regression",
+      "root cause|post-mortem|postmortem|retrospective"
+    ],
+    "model_answer": "First, I would confirm the bug is real by reproducing it, then assess its severity: how many users it affects and whether it causes data loss, a security hole or only a cosmetic issue. Then I would immediately notify the tech lead and the release owner with clear facts, steps to reproduce and the impact, because the release decision is not mine alone. Next, we would weigh the options together. If the fix is small and low-risk, we can apply it, run the regression tests and still release on time. If the fix is risky, we can disable the affected feature with a feature flag, or delay the release. I would never ship a known critical bug silently just to protect the date. After the decision, I would keep stakeholders updated until the release is safe. Finally, I would join a short post-mortem to find the root cause and add an automated test, so this kind of bug is caught earlier next time.",
+    "tips": [
+      "Walk through triage, communication, the decision options and the follow-up, in that order.",
+      "Assess severity with facts, such as users affected or data loss, before proposing a fix.",
+      "Present options such as a tested fix, a feature flag or a delay, and let the release owner decide."
+    ],
+    "mistakes": [
+      "Hiding the bug or shipping anyway to protect the release date.",
+      "Pushing an untested last-minute fix straight to production.",
+      "Deciding alone without informing the tech lead or release owner."
+    ],
+    "follow_ups": [
+      "How would you decide whether a bug is serious enough to block a release?",
+      "What would you change in the process so bugs like this are caught earlier?"
+    ]
+  },
+  {
+    "id": 32,
+    "category": "Situational",
+    "difficulty": "Medium",
+    "question": "A stakeholder is unhappy with your work. How do you respond?",
+    "keywords": [
+      "listen|listening",
+      "calm|defensive|composed",
+      "specific|examples",
+      "acknowledge|acknowledging|ownership",
+      "expectations|expectation",
+      "action plan|next steps",
+      "follow up|follow-up|check in"
+    ],
+    "model_answer": "First, I would stay calm and listen to the full concern without interrupting or getting defensive. My goal is to understand the problem, not to win an argument. Then I would ask for specific examples, such as which report was wrong or which feature did not behave as expected, so I know exactly what to fix. Next, I would acknowledge the valid points and take ownership of my mistakes. Often the real issue is a gap between their expectations and what I understood, so I would compare their needs with the original requirements. After that, I would agree on an action plan with clear next steps and dates, for example a corrected version by Thursday and a short review call before final delivery. Finally, I would follow up after the fix to confirm they are satisfied. On future work, I would share drafts earlier, so issues surface sooner.",
+    "tips": [
+      "Show how you would handle the conversation itself and what you would do afterwards, step by step.",
+      "Ask for concrete examples so you can separate a real quality gap from unclear expectations.",
+      "End with a specific plan, dates and a follow-up, plus one change that prevents a repeat."
+    ],
+    "mistakes": [
+      "Getting defensive or arguing that the stakeholder misunderstood the brief.",
+      "Promising to fix everything without asking what exactly is wrong.",
+      "Fixing the issue but never following up to confirm the stakeholder is satisfied."
+    ],
+    "follow_ups": [
+      "What if you believe the stakeholder's criticism is wrong?",
+      "How do you set expectations at the start of a project to avoid this?"
+    ]
+  },
+  {
+    "id": 33,
+    "category": "Situational",
+    "difficulty": "Easy",
+    "question": "You're asked to use a technology you've never worked with. How do you get up to speed?",
+    "keywords": [
+      "official documentation|documentation|docs",
+      "tutorial|tutorials",
+      "hands-on|small project|prototype",
+      "existing codebase|codebase|existing code",
+      "teammate|mentor|colleague",
+      "core concepts|concepts|fundamentals",
+      "notes|share"
+    ],
+    "model_answer": "First, I would find out why the team chose the technology and which parts my task needs. That way, I learn with a clear goal instead of reading everything. Then I would read the official documentation and complete the beginner tutorial to understand the core concepts and the standard way of doing things. Next, I would build something small and hands-on, such as a tiny service with one endpoint, because writing code exposes gaps much faster than reading. After that, I would study how the technology is used in our existing codebase, since team conventions matter as much as the official style guide. I would also ask a teammate who knows it well for a short walkthrough and a careful review of my first pull request. Finally, I would keep notes on the problems I solved and share a short summary with the team. As a result, the next new joiner gets up to speed faster.",
+    "tips": [
+      "Describe a structured learning plan, from your first resources to applying it in real work.",
+      "Mention building something small early, because hands-on practice reveals gaps quickly.",
+      "Show you learn from the team's existing code and ask experienced colleagues for reviews."
+    ],
+    "mistakes": [
+      "Saying you would watch videos for weeks before writing any code.",
+      "Ignoring the team's conventions and copying random examples from the internet."
+    ],
+    "follow_ups": [
+      "Which technology did you learn most recently, and how long did it take?",
+      "How do you know when you have learned enough to start on the real task?"
+    ]
+  },
+  {
+    "id": 34,
+    "category": "Programming & OOP",
+    "difficulty": "Easy",
+    "question": "What are the four pillars of object-oriented programming?",
+    "keywords": [
+      "encapsulation|encapsulate",
+      "abstraction",
+      "inheritance|inherit",
+      "polymorphism|polymorphic",
+      "overriding|override|overloading",
+      "composition"
+    ],
+    "model_answer": "Object-oriented programming organizes code around objects that combine data with the methods that operate on that data. It rests on four pillars. Encapsulation bundles state and behavior together and hides internal details, for example keeping an account balance private and changing it only through deposit and withdraw methods that validate the amount. Abstraction exposes only the essential operations, so a caller uses a PaymentProcessor interface without knowing how each provider works internally. Inheritance lets a subclass reuse and extend a parent class, such as SavingsAccount extending Account. Polymorphism lets one interface take many forms. Through method overriding, calling calculateInterest on an Account reference that holds a SavingsAccount runs the subclass's version at runtime, while method overloading gives compile-time polymorphism. Together, these pillars make code modular and easier to extend. However, deep inheritance hierarchies become fragile, so many teams prefer composition for reuse and keep inheritance for genuine is-a relationships.",
+    "tips": [
+      "Name all four, then give a one-line definition and a small example for each.",
+      "Use one running example, such as bank accounts, to connect all four pillars.",
+      "Mention runtime versus compile-time polymorphism, and when composition beats inheritance."
+    ],
+    "mistakes": [
+      "Giving the same definition for encapsulation and abstraction.",
+      "Listing the four names without any explanation or example.",
+      "Presenting inheritance as the main goal of OOP rather than one tool among several."
+    ],
+    "follow_ups": [
+      "What is the difference between encapsulation and abstraction?",
+      "When would you choose composition over inheritance?"
+    ]
+  },
+  {
+    "id": 35,
+    "category": "Programming & OOP",
+    "difficulty": "Medium",
+    "question": "What is the difference between an abstract class and an interface?",
+    "keywords": [
+      "abstract class",
+      "interface",
+      "instance fields|instance state|state",
+      "constructors|constructor",
+      "default methods|default method",
+      "multiple interfaces|implement multiple",
+      "capability|capabilities|role"
+    ],
+    "model_answer": "An abstract class is a class that cannot be instantiated and can mix abstract methods with implemented ones. An interface defines a contract that unrelated classes can implement. In modern Java the gap is smaller than many textbooks suggest. Since Java 8, interfaces can contain default methods and static methods with bodies, and since Java 9, private methods. The real differences are state and inheritance. An abstract class can have instance fields, constructors and protected members, so it suits closely related classes that share state, such as a BaseRepository holding a connection. An interface has no constructors and no instance state, only constants. In addition, a class can extend only one class but implement multiple interfaces, so interfaces model capabilities such as Comparable. Therefore, use an abstract class for an is-a family with shared state, and an interface for a role many types can play. The rules vary by language. For example, C++ has no interface keyword and uses pure virtual functions instead.",
+    "tips": [
+      "Define both, then compare them on a few concrete dimensions and finish with when to use each.",
+      "Mention that Java 8 added default and static interface methods, so 'interfaces have no code' is outdated.",
+      "Note that the rules differ by language, for example C++ and Python have no interface keyword."
+    ],
+    "mistakes": [
+      "Claiming interfaces can never contain method implementations, which has been false since Java 8.",
+      "Forgetting that a class can implement many interfaces but extend only one class.",
+      "Saying abstract classes cannot have constructors."
+    ],
+    "follow_ups": [
+      "What happens if a class implements two interfaces that define the same default method?",
+      "When would you use composition instead of an abstract base class?"
+    ]
+  },
+  {
+    "id": 36,
+    "category": "Programming & OOP",
+    "difficulty": "Easy",
+    "question": "Explain method overloading versus method overriding.",
+    "keywords": [
+      "overloading|overload",
+      "overriding|override|overrides",
+      "parameter list|parameter lists|parameters|signature",
+      "compile time|compile-time",
+      "runtime|run time|dynamic dispatch",
+      "subclass|child class",
+      "return type"
+    ],
+    "model_answer": "Method overloading means defining several methods with the same name but different parameter lists, such as a different number or different types of arguments. For example, a Calculator class can have add(int a, int b) and add(double a, double b). The compiler chooses the version at compile time from the static types of the arguments, and a different return type alone is not enough to overload. Method overriding means a subclass provides its own implementation of an inherited instance method with the same signature. For example, Dog overrides speak from Animal, so calling speak on an Animal reference that holds a Dog runs the Dog version. This is resolved at runtime through dynamic dispatch, which is how runtime polymorphism works. In Java, an override may return a subtype but cannot reduce visibility, and static, private and final methods cannot be overridden. In short, overloading offers convenient variants of one operation, while overriding specializes behavior in a subclass.",
+    "tips": [
+      "Define each with a short code example, then compare when and how each call is resolved.",
+      "State that overloading is resolved at compile time and overriding at runtime.",
+      "Mention that the return type alone cannot distinguish overloads in Java."
+    ],
+    "mistakes": [
+      "Mixing up the two terms or giving the same example for both.",
+      "Claiming a different return type alone is enough to overload a method.",
+      "Saying static methods can be overridden, when in Java they are only hidden."
+    ],
+    "follow_ups": [
+      "Can you overload a method in Python?",
+      "What does the @Override annotation do, and why should you use it?"
+    ]
+  },
+  {
+    "id": 37,
+    "category": "Programming & OOP",
+    "difficulty": "Hard",
+    "question": "What are the SOLID principles?",
+    "keywords": [
+      "single responsibility",
+      "open-closed|open closed|open/closed",
+      "Liskov substitution|Liskov",
+      "interface segregation",
+      "dependency inversion",
+      "abstractions|abstraction",
+      "over-engineering|overengineering|over engineering"
+    ],
+    "model_answer": "SOLID is a set of five object-oriented design principles for code that is easy to maintain and change. Single responsibility means a class has one reason to change, so calculating, printing and saving an invoice belong in separate classes. Open-closed means code is open for extension but closed for modification. For example, supporting a new payment method should mean adding a class, not editing a long switch statement. Liskov substitution means a subtype must work anywhere its base type is expected without breaking the contract. A mutable Square extending Rectangle violates it, because callers expect setting the width to leave the height unchanged. Interface segregation means clients should not depend on methods they do not use, so a large Machine interface is better split into Printer and Scanner. Dependency inversion means high-level modules and low-level details both depend on abstractions, instead of high-level code depending directly on concrete classes. For example, an OrderService depends on a PaymentGateway interface, and the real implementation is injected, which makes testing with mocks easy. However, applying SOLID everywhere causes over-engineering with many tiny classes, so apply it where change is likely.",
+    "tips": [
+      "Name each principle, then give a one-sentence meaning and a small concrete example for each.",
+      "Use a classic violation for Liskov, such as Square extending Rectangle, to show real understanding.",
+      "Distinguish dependency inversion from dependency injection, and mention the cost of over-applying SOLID."
+    ],
+    "mistakes": [
+      "Reciting the acronym without giving an example of any principle.",
+      "Confusing dependency inversion with dependency injection, which is only one way to achieve it.",
+      "Describing single responsibility as 'a class should have only one method'."
+    ],
+    "follow_ups": [
+      "Can you show code that violates the open-closed principle and refactor it?",
+      "How does dependency inversion make unit testing easier?"
+    ]
+  },
+  {
+    "id": 38,
+    "category": "Programming & OOP",
+    "difficulty": "Medium",
+    "question": "What is the difference between pass-by-value and pass-by-reference?",
+    "keywords": [
+      "pass-by-value|pass by value|by value",
+      "pass-by-reference|pass by reference|by reference",
+      "copy|copies|copied",
+      "reassign|reassigning|reassignment",
+      "mutate|mutating|mutation|modify",
+      "Java",
+      "C++|C plus plus"
+    ],
+    "model_answer": "In pass-by-value, the function receives a copy of the argument, so assigning a new value to the parameter never affects the caller's variable. In pass-by-reference, the parameter is an alias for the caller's variable, so an assignment inside the function changes the original. C++ supports both. For example, void addOne(int& x) increments the caller's integer, while void addOne(int x) changes only a local copy. Java is often described wrongly here. It is always pass-by-value, and for objects, the copied value is the reference. As a result, a method can mutate the object, and the caller sees the change, but if it reassigns the parameter to a new object, the caller's variable still points to the old one. Python works the same way, a model called call-by-sharing. The classic test is a swap function: it works with C++ references but cannot be written in Java or Python.",
+    "tips": [
+      "Define both models, then explain what really happens in two or three languages you know.",
+      "Separate mutating the object from reassigning the parameter, because that distinction is what interviewers test.",
+      "Use a swap function as the test: it works with true references but not in Java."
+    ],
+    "mistakes": [
+      "Claiming Java passes objects by reference, when it passes the reference by value.",
+      "Saying Python passes immutable objects by value and mutable objects by reference.",
+      "Mixing up mutating an object with reassigning the variable that points to it."
+    ],
+    "follow_ups": [
+      "Why can't you write a working swap method for two integers in Java?",
+      "What happens when you pass a list to a Python function and append to it?"
+    ]
+  },
+  {
+    "id": 39,
+    "category": "Programming & OOP",
+    "difficulty": "Easy",
+    "question": "What is the difference between compiled and interpreted languages?",
+    "keywords": [
+      "compiler|compiled|compile",
+      "interpreter|interpreted|interpret",
+      "machine code|native code",
+      "bytecode|byte code",
+      "JIT|just-in-time|just in time",
+      "implementation|implementations",
+      "virtual machine|JVM"
+    ],
+    "model_answer": "An ahead-of-time compiler translates source code into another form, usually native machine code, before the program runs. An interpreter executes the program directly, processing source code or an intermediate form while it runs. Strictly, compiled or interpreted describes an implementation, not a language. For example, C is usually compiled to machine code, yet C interpreters exist. Many modern runtimes are hybrids. Java source is compiled to bytecode, and the Java virtual machine typically starts by interpreting that bytecode, then uses a just-in-time compiler to turn frequently run code into machine code. CPython also compiles Python source to bytecode, which its virtual machine then interprets, while the PyPy implementation adds a JIT. The trade-off is that ahead-of-time compilation gives fast startup and predictable speed, while interpretation gives portability and a quick edit-run cycle. JIT compilation can approach native speed after warm-up, at the cost of extra memory and slower startup.",
+    "tips": [
+      "Define both, explain how real languages run in practice, then compare the trade-offs.",
+      "Point out that compiled or interpreted describes an implementation, not the language itself.",
+      "Explain bytecode and JIT compilation using Java or CPython to show you understand hybrid execution."
+    ],
+    "mistakes": [
+      "Saying Python is purely interpreted with no compilation step at all.",
+      "Calling Java either fully compiled or fully interpreted, ignoring bytecode and the JIT.",
+      "Claiming interpreted code is always slower, regardless of JIT compilation."
+    ],
+    "follow_ups": [
+      "What can a JIT compiler optimize that an ahead-of-time compiler cannot?",
+      "What is stored in a .pyc file, and when does Python create it?"
+    ]
+  },
+  {
+    "id": 40,
+    "category": "Programming & OOP",
+    "difficulty": "Medium",
+    "question": "How does exception handling work, and what are its best practices?",
+    "keywords": [
+      "try|try block",
+      "catch|except block|except clause|try-except|try except|try/except",
+      "finally block|finally clause|finally runs|finally always|the finally",
+      "propagate|propagates|call stack|unwind",
+      "specific exceptions|specific exception",
+      "resources|try-with-resources|with statement|context manager",
+      "logging|logged|logger|log the|log it|logs"
+    ],
+    "model_answer": "Exception handling separates error handling from the normal flow of a program. When code throws an exception, execution stops and the runtime unwinds the call stack until it finds a matching handler. If no handler exists, the exception propagates to the top and the program, or that thread, terminates with a stack trace. The try block holds code that can fail, and catch, or except in Python, handles specific error types. The finally block runs whether or not an exception occurred, so it suits cleanup. For example, a file loader can catch FileNotFoundException and return a clear message instead of crashing. Best practice is to catch specific exceptions rather than a generic Exception, and never swallow them in an empty catch block. In addition, use try-with-resources in Java or a with statement in Python, so resources close automatically. Catch an exception only where you can handle it, keep the original cause when wrapping it, and log it once with context.",
+    "tips": [
+      "Explain the mechanism first, then give a few best practices with a short example.",
+      "Describe what happens when no handler matches, including propagation up the call stack.",
+      "Mention catching specific exceptions, automatic resource cleanup, and never swallowing errors silently."
+    ],
+    "mistakes": [
+      "Catching the generic Exception everywhere, which hides real bugs.",
+      "Leaving an empty catch block so failures disappear silently.",
+      "Forgetting cleanup, so files or connections leak when an exception occurs."
+    ],
+    "follow_ups": [
+      "What is the difference between checked and unchecked exceptions in Java?",
+      "When should you rethrow an exception instead of handling it?"
+    ]
+  },
+  {
+    "id": 41,
+    "category": "Data Structures & Algorithms",
+    "difficulty": "Easy",
+    "question": "What is the difference between an array and a linked list?",
+    "keywords": [
+      "contiguous",
+      "random access|index|indexing",
+      "pointer|pointers|node|nodes",
+      "insertion|inserting|insert|deletion|deleting",
+      "constant time|O of 1|O of one|order one",
+      "cache|locality|cache-friendly",
+      "dynamic array|dynamic arrays|resizing|resize"
+    ],
+    "model_answer": "An array stores elements in one contiguous block of memory, so any element's address is computed from its index. That gives O(1), constant time, random access. A linked list stores elements in separate nodes, each holding a value and a pointer to the next node, plus the previous one in a doubly linked list. Reaching an element by position therefore takes O(n) time, since you walk from the head. For changes, the trade-off flips. Inserting or deleting in the middle of an array is O(n), because later elements must shift, while a linked list just relinks pointers in O(1) once you hold a reference to the adjacent node. Dynamic arrays, such as Python lists or Java's ArrayList, grow their capacity geometrically, so appending is amortized O(1). In practice, arrays are usually faster, because contiguous memory is cache friendly, while linked lists spend extra memory on pointers. Linked lists suit frequent splicing, such as the recency list inside an LRU cache.",
+    "tips": [
+      "Compare them on memory layout, access cost, insertion cost and real-world performance.",
+      "Give the Big-O for access by index and for insertion in the middle in both structures.",
+      "Mention cache locality and dynamic arrays, since they decide real-world performance."
+    ],
+    "mistakes": [
+      "Saying linked list insertion is always O(1), ignoring the O(n) search for the position.",
+      "Forgetting that dynamic arrays give amortized O(1) appends.",
+      "Ignoring the extra pointer memory and poor cache behavior of linked lists."
+    ],
+    "follow_ups": [
+      "How would you detect a cycle in a linked list?",
+      "How does a dynamic array achieve amortized O(1) appends?"
+    ]
+  },
+  {
+    "id": 42,
+    "category": "Data Structures & Algorithms",
+    "difficulty": "Easy",
+    "question": "Explain Big-O notation with examples.",
+    "keywords": [
+      "upper bound|upper-bound",
+      "input size|input",
+      "constant time|O of 1|O of one|constant",
+      "logarithmic|log n|log of n",
+      "linear|linear time|O of n",
+      "quadratic|n squared|O of n squared",
+      "worst case|worst-case"
+    ],
+    "model_answer": "Big-O notation describes how an algorithm's running time or memory grows as the input size n grows. Formally, it gives an upper bound on that growth, ignoring constant factors and lower-order terms, so 3n squared plus 5n is O(n squared). For example, reading an array element by index is O(1), constant time. Binary search on a sorted array is O(log n), logarithmic, because each step halves the range. Scanning a list for a value is O(n), linear. Merge sort is O(n log n), and comparing every pair with two nested loops is O(n squared), quadratic. The naive recursive Fibonacci is O(2^n), exponential. Big-O is not the same as the worst case. It is a bound that we usually quote for the worst case, while Big-Theta is a tight bound and Big-Omega a lower bound. However, constants still matter, so an O(n squared) insertion sort can beat merge sort on tiny inputs.",
+    "tips": [
+      "Define it precisely, then walk through common growth rates from fastest to slowest with an example each.",
+      "Explain that Big-O drops constants and lower-order terms and describes growth, not exact time.",
+      "Distinguish Big-O as an upper bound from worst-case analysis, and mention Big-Theta."
+    ],
+    "mistakes": [
+      "Saying Big-O measures the exact running time in seconds.",
+      "Treating Big-O and the worst case as the same thing.",
+      "Claiming a lower Big-O is always faster, even for small inputs."
+    ],
+    "follow_ups": [
+      "What is the time complexity of a hash table lookup, and why?",
+      "What is the difference between Big-O, Big-Theta and Big-Omega?"
+    ]
+  },
+  {
+    "id": 43,
+    "category": "Data Structures & Algorithms",
+    "difficulty": "Medium",
+    "question": "How does a hash table work, and how are collisions handled?",
+    "keywords": [
+      "hash function",
+      "buckets|bucket",
+      "collision|collisions",
+      "chaining|separate chaining",
+      "open addressing|probing",
+      "load factor|rehash|resize",
+      "constant time|O of 1|O of one|average"
+    ],
+    "model_answer": "A hash table stores key-value pairs in an array of buckets. A hash function converts each key into an integer, and that value modulo the array size gives the bucket index. As a result, insert, lookup and delete take constant time, O(1), on average. A collision happens when two different keys map to the same bucket, which is unavoidable because keys outnumber buckets. The first fix is separate chaining, where each bucket holds a small list, and a lookup scans it comparing keys. Java's HashMap even turns long chains into balanced trees. The second fix is open addressing, where all entries live in the array itself, and a collision makes the table probe for another free slot, using linear probing, quadratic probing or double hashing. The table also tracks its load factor, entries divided by buckets, and resizes and rehashes when it passes a threshold such as 75 percent. With a poor hash function, operations degrade to O(n) in the worst case.",
+    "tips": [
+      "Explain the structure and a lookup first, then the two main collision strategies, then performance.",
+      "Compare separate chaining with open addressing, including what each does on a collision.",
+      "Mention the load factor and resizing, and that the worst case degrades to O(n)."
+    ],
+    "mistakes": [
+      "Claiming hash table lookups are O(1) even in the worst case.",
+      "Forgetting that keys must still be compared, since different keys can share a bucket.",
+      "Not knowing what happens when the table fills up."
+    ],
+    "follow_ups": [
+      "Why must equal objects have equal hash codes?",
+      "How would you implement an LRU cache using a hash table?"
+    ]
+  },
+  {
+    "id": 44,
+    "category": "Data Structures & Algorithms",
+    "difficulty": "Easy",
+    "question": "Compare a stack and a queue, with real-world uses.",
+    "keywords": [
+      "LIFO|last in first out|last-in first-out",
+      "FIFO|first in first out|first-in first-out",
+      "push|pop",
+      "enqueue|dequeue",
+      "call stack|undo",
+      "task queue|job queue|scheduling|print queue",
+      "constant time|O of 1|O of one"
+    ],
+    "model_answer": "A stack is a last-in, first-out, or LIFO, collection. You push items onto the top and pop them from the top, so the most recent item comes out first. A queue is first-in, first-out, or FIFO. You enqueue at the back and dequeue from the front, so items leave in arrival order. Both run their core operations in O(1), constant time, on a linked list or a circular buffer, and a dynamic array gives a stack amortized O(1) pushes. Stacks fit problems where the latest item comes first. For example, the call stack stores function frames, an editor's undo history is a stack, and depth-first search and bracket matching use one. Queues fit problems where arrival order matters, such as a printer's job queue, a background task queue, or breadth-first search. One warning: removing from the front of a Python list is O(n), so collections.deque is the right queue there.",
+    "tips": [
+      "Define each by its ordering rule, name the core operations, then give real uses for both.",
+      "Give concrete uses such as the call stack, undo, breadth-first search and job queues.",
+      "Mention that the core operations are O(1) with a suitable implementation."
+    ],
+    "mistakes": [
+      "Mixing up which structure is LIFO and which is FIFO.",
+      "Implementing a queue by removing from the front of an array, which costs O(n).",
+      "Listing only textbook definitions without any real-world use."
+    ],
+    "follow_ups": [
+      "How would you implement a queue using two stacks?",
+      "What is a priority queue, and how is it different from a normal queue?"
+    ]
+  },
+  {
+    "id": 45,
+    "category": "Data Structures & Algorithms",
+    "difficulty": "Easy",
+    "question": "How does binary search work, and what is its time complexity?",
+    "keywords": [
+      "sorted",
+      "middle|midpoint|mid",
+      "halves|half|halving",
+      "logarithmic|log n|log of n|O of log n|log base",
+      "low and high|low|high",
+      "integer overflow|overflow",
+      "iterative|iteratively|constant space"
+    ],
+    "model_answer": "Binary search finds a target in a sorted array by repeatedly halving the search range. It keeps two indexes, low and high, and compares the target with the middle element. If they match, it returns that index. If the target is smaller, it continues in the left half, otherwise in the right half, until low passes high, which means the target is absent. Because each comparison halves the range, the time complexity is O(log n), logarithmic. For example, a sorted array of one million elements needs at most 20 comparisons, while a linear scan can need a million. The iterative version uses O(1) extra space, while a recursive version uses O(log n) stack space. In practice, compute the middle as low plus (high minus low) divided by 2, because low plus high can cause integer overflow in Java or C++. In addition, the data must be sorted and support random access, so binary search on a linked list gives no real speed-up.",
+    "tips": [
+      "State the precondition, walk through the steps, then give the time and space complexity.",
+      "Use a concrete number, such as one million elements needing only 20 comparisons.",
+      "Mention the overflow-safe midpoint formula and that the input must be sorted."
+    ],
+    "mistakes": [
+      "Forgetting that the input must be sorted.",
+      "Making off-by-one errors in the loop condition that cause infinite loops or missed elements.",
+      "Computing the midpoint as (low + high) / 2 where integers can overflow."
+    ],
+    "follow_ups": [
+      "How would you find the first occurrence of a value that appears many times?",
+      "Can you use binary search on something other than a sorted array?"
+    ]
+  },
+  {
+    "id": 46,
+    "category": "Data Structures & Algorithms",
+    "difficulty": "Medium",
+    "question": "Explain the difference between BFS and DFS.",
+    "keywords": [
+      "BFS|breadth-first|breadth first",
+      "DFS|depth-first|depth first",
+      "queue",
+      "stack|recursion|recursive",
+      "shortest path",
+      "visited",
+      "V + E|V plus E|vertices plus edges|vertices and edges"
+    ],
+    "model_answer": "Breadth-first search, or BFS, explores a graph level by level. It visits all neighbors of the start node first, then their neighbors, using a FIFO queue. Depth-first search, or DFS, follows one path as deep as possible before backtracking, using a stack or recursion. On a general graph, both keep a visited set so no node is processed twice, and both run in O(V + E) time with an adjacency list, for V vertices and E edges. BFS finds the shortest path in an unweighted graph, such as the fewest moves in a maze. Graphs with non-negative edge weights need Dijkstra's algorithm instead. DFS suits cycle detection, topological sorting and backtracking problems such as solving a sudoku. Memory also differs. BFS keeps the whole frontier in its queue, which can be very wide, while recursive DFS keeps only the current path. However, deep recursion can overflow the call stack, so an explicit stack is safer for large graphs.",
+    "tips": [
+      "Explain how each traversal explores the graph, then compare data structures, uses and memory.",
+      "Say which traversal finds shortest paths in unweighted graphs, and explain why.",
+      "Mention O(V + E) time and the visited set needed for graphs with cycles."
+    ],
+    "mistakes": [
+      "Claiming BFS finds shortest paths in weighted graphs.",
+      "Forgetting the visited set, which causes infinite loops on graphs with cycles.",
+      "Mixing up which traversal uses a queue and which uses a stack."
+    ],
+    "follow_ups": [
+      "How would you detect a cycle in a directed graph using DFS?",
+      "How would you find the shortest path if the edges had weights?"
+    ]
+  },
+  {
+    "id": 47,
+    "category": "Data Structures & Algorithms",
+    "difficulty": "Hard",
+    "question": "What is dynamic programming? Give an example.",
+    "keywords": [
+      "overlapping subproblems|overlapping",
+      "optimal substructure",
+      "memoization|memoisation|memoize|top-down|top down|memoise",
+      "tabulation|bottom-up|bottom up",
+      "recurrence|state transition",
+      "greedy",
+      "time complexity|exponential|big O|big-O"
+    ],
+    "model_answer": "Dynamic programming solves a problem by breaking it into smaller subproblems, solving each one only once, and storing the results for reuse. It applies when a problem has two properties. The first is overlapping subproblems, meaning the same subproblems recur many times. The second is optimal substructure, meaning an optimal answer can be built from optimal answers to subproblems. Memoization is the top-down style, recursion with a cache, while tabulation fills a table bottom-up in dependency order. For example, take the fewest coins needed to make 6 from coins of 1, 3 and 4. A greedy approach picks 4, 1 and 1, which is three coins, but the best answer is 3 plus 3. With DP, I solve every amount from 1 to 6 in order. For each amount, I check every coin that fits, take one plus the stored best result for the amount minus that coin, and keep the minimum. This recurrence gives two coins for 6. As a result, the time complexity drops from exponential for naive recursion to O(amount times coins). However, if subproblems do not overlap, as in merge sort, plain divide and conquer is enough.",
+    "tips": [
+      "Define it, say when it applies, compare the two styles, then work one small example aloud.",
+      "Name both required properties: overlapping subproblems and optimal substructure.",
+      "Pick an example where greedy fails, such as coin change, to show why DP is needed."
+    ],
+    "mistakes": [
+      "Calling any cached recursion dynamic programming without explaining overlapping subproblems.",
+      "Quoting Fibonacci without stating the recurrence or the complexity improvement.",
+      "Confusing dynamic programming with divide and conquer, whose subproblems do not overlap."
+    ],
+    "follow_ups": [
+      "How would you reduce the memory used by your DP solution?",
+      "How would you change the solution to return the actual coins used?"
+    ]
+  },
+  {
+    "id": 48,
+    "category": "Databases & SQL",
+    "difficulty": "Medium",
+    "question": "What is database normalization? Explain 1NF, 2NF and 3NF.",
+    "keywords": [
+      "redundancy|redundant|duplicat",
+      "anomalies|anomaly",
+      "atomic",
+      "partial dependency|partial dependencies|partial",
+      "transitive dependency|transitive dependencies|transitive",
+      "composite key|composite|candidate key",
+      "denormalization|denormaliz|denormalis|denormalisation"
+    ],
+    "model_answer": "Normalization structures relational tables to reduce redundancy and prevent insert, update and delete anomalies, by splitting tables along functional dependencies. First normal form requires atomic values and no repeating groups, so a column holding several phone numbers breaks 1NF. Second normal form also forbids partial dependencies, meaning every non-key column depends on the whole key, which matters when the key is composite. In an order_items table keyed by order_id and product_id, product_name depends only on product_id, so it belongs in a products table. Third normal form also forbids transitive dependencies, so non-key columns depend directly on the key, not on other non-key columns. If an employees table stores dept_id and dept_name, dept_name depends on dept_id, so it moves to a departments table. In short, every non-key column depends on the key, the whole key, and nothing but the key. However, more tables mean more joins, so read-heavy systems sometimes denormalize deliberately.",
+    "tips": [
+      "State the goal first, then explain each normal form with a small table example.",
+      "Summarize with 'the key, the whole key, and nothing but the key'.",
+      "Mention the trade-off of extra joins, and why analytics systems sometimes denormalize."
+    ],
+    "mistakes": [
+      "Defining 2NF and 3NF vaguely, without partial or transitive dependencies.",
+      "Claiming more normalization is always better, ignoring the cost of joins.",
+      "Using examples that do not show which dependency is being removed."
+    ],
+    "follow_ups": [
+      "What is BCNF, and how does it differ from 3NF?",
+      "When would you deliberately denormalize a schema?"
+    ]
+  },
+  {
+    "id": 49,
+    "category": "Databases & SQL",
+    "difficulty": "Medium",
+    "question": "What are the ACID properties of a transaction?",
+    "keywords": [
+      "atomicity|atomic",
+      "consistency|consistent",
+      "isolation|isolated",
+      "durability|durable",
+      "rollback|roll back|rolls back|rolled back",
+      "isolation levels|isolation level|serializable|read committed",
+      "write-ahead log|write ahead log|WAL|transaction log|redo log|commit log"
+    ],
+    "model_answer": "ACID describes four guarantees of a database transaction. Atomicity means all or nothing: either every change in the transaction is committed, or, if it aborts, every change is rolled back. Consistency means a transaction moves the database from one valid state to another, so declared constraints such as primary keys, foreign keys and check constraints always hold. This is different from consistency in the CAP theorem. Isolation controls how concurrent transactions interact. Serializable isolation gives the same result as running them one at a time in some order, but most databases default to weaker isolation levels for speed, such as read committed in PostgreSQL, which allow some anomalies. Durability means a committed transaction survives a crash, usually because changes are recorded in a write-ahead log flushed to disk before the commit is confirmed. For example, a bank transfer debits one account and credits another in a single transaction. If the credit fails, a rollback undoes the debit, so money is never lost or created.",
+    "tips": [
+      "Explain each of the four letters in a sentence or two, then use one running example.",
+      "Use a bank transfer to show atomicity and rollback in action.",
+      "Mention isolation levels and how durability is achieved, for example with a write-ahead log."
+    ],
+    "mistakes": [
+      "Confusing ACID consistency with consistency in the CAP theorem.",
+      "Assuming every database runs fully serializable transactions by default.",
+      "Defining durability as 'the data is saved' without mentioning crash recovery."
+    ],
+    "follow_ups": [
+      "What anomalies can occur at the read committed isolation level?",
+      "How do distributed databases handle a transaction that spans several nodes?"
+    ]
+  },
+  {
+    "id": 50,
+    "category": "Databases & SQL",
+    "difficulty": "Easy",
+    "question": "Explain the different types of SQL joins.",
+    "keywords": [
+      "INNER JOIN|inner",
+      "LEFT JOIN|left outer",
+      "RIGHT JOIN|right outer",
+      "FULL OUTER JOIN|full outer|full join",
+      "CROSS JOIN|Cartesian",
+      "NULL|nulls",
+      "self join|self-join"
+    ],
+    "model_answer": "A join combines rows from two tables based on a related column, usually a foreign key. Take customers and orders as an example. An INNER JOIN returns only rows with a match in both tables, so each customer appears once per matching order, and customers without orders disappear. A LEFT JOIN returns every row from the left table plus any matches from the right, filling NULL where no match exists. That makes it a common way to find customers with no orders, by keeping rows where the order id IS NULL. A RIGHT JOIN is the mirror image, and can always be rewritten as a LEFT JOIN by swapping the tables. A FULL OUTER JOIN keeps all rows from both tables, with NULLs on whichever side has no match. A CROSS JOIN returns the Cartesian product, so 100 customers and 50 products give 5,000 rows. Finally, a self join joins a table to itself with aliases, such as matching employees to their managers.",
+    "tips": [
+      "Use one pair of tables as a running example and explain what each join returns.",
+      "Explain where NULLs appear in outer joins and how to find rows with no match.",
+      "Mention that a WHERE filter on the joined table's columns can turn a LEFT JOIN into an inner join."
+    ],
+    "mistakes": [
+      "Saying a LEFT JOIN returns only the matching rows.",
+      "Forgetting that a CROSS JOIN returns every combination and can explode row counts.",
+      "Not knowing how to find rows that have no match in the other table."
+    ],
+    "follow_ups": [
+      "How would you find customers who have never placed an order?",
+      "What changes if you put a condition in the ON clause instead of WHERE for a LEFT JOIN?"
+    ]
+  },
+  {
+    "id": 51,
+    "category": "Databases & SQL",
+    "difficulty": "Medium",
+    "question": "What is a database index, and when should you use one?",
+    "keywords": [
+      "B-tree|B tree|btree",
+      "full table scan|table scan|full scan",
+      "logarithmic|log n|O of log n",
+      "selectivity|selective|cardinality",
+      "composite index|composite|multi-column",
+      "slower writes|writes|write overhead",
+      "storage|disk space"
+    ],
+    "model_answer": "A database index is a separate data structure, usually a B-tree, that keeps a column's values in sorted order with pointers to the matching rows. Without an index, finding a user by email needs a full table scan, which is O(n). With a B-tree index, the database finds the row in O(log n), logarithmic time, and it also speeds up range queries and sorting. Add indexes on large tables for columns often used in WHERE, JOIN and ORDER BY clauses, especially high-selectivity columns such as email. A composite index on customer_id and created_at mainly helps queries filtering on customer_id, alone or with a date range. However, indexes are not free. Every insert and delete, and any update to an indexed column, must also maintain the index, so writes become slower, and each index uses extra storage. Columns with few distinct values, such as a boolean flag, rarely benefit. Finally, check with EXPLAIN that the query planner uses the index.",
+    "tips": [
+      "Explain what an index is and how it speeds up reads, then cover when it helps and what it costs.",
+      "Name the usual structure, a B-tree, and compare O(log n) lookups with a full table scan.",
+      "Mention write overhead, storage, low-selectivity columns and checking the plan with EXPLAIN."
+    ],
+    "mistakes": [
+      "Saying you should index every column to make queries faster.",
+      "Ignoring that indexes slow down inserts, updates and deletes.",
+      "Not knowing that column order matters in a composite index."
+    ],
+    "follow_ups": [
+      "What is the difference between a clustered and a non-clustered index?",
+      "Why might the database ignore an index you created?"
+    ]
+  },
+  {
+    "id": 52,
+    "category": "Databases & SQL",
+    "difficulty": "Medium",
+    "question": "SQL vs NoSQL: when would you choose each?",
+    "keywords": [
+      "relational",
+      "schema",
+      "ACID|transactions",
+      "joins|join",
+      "horizontal scaling|horizontally|partitioning|sharding|scale out",
+      "data models|document|key-value",
+      "access patterns|access pattern"
+    ],
+    "model_answer": "SQL databases are relational. They store data in tables with a defined schema, link tables through foreign keys, and use joins and ACID transactions to keep related data correct. NoSQL is an umbrella term for other data models, such as document, key-value, wide-column and graph databases. They usually offer flexible schemas and scale horizontally by partitioning data across machines, often with tunable or eventual consistency. I would choose SQL when the data is structured and highly related, when I need complex or ad hoc queries, and when correctness is critical, such as payments, orders or inventory. I would choose NoSQL when the access patterns are simple and known in advance, the write volume is very high, or the structure varies, such as a product catalog with different attributes per item. The idea that NoSQL means no transactions is outdated, since several NoSQL databases now support ACID transactions, and relational databases such as PostgreSQL can store JSON too. In practice, many systems combine both.",
+    "tips": [
+      "Contrast the two on data model, consistency and scaling, then give a clear rule for choosing.",
+      "Give concrete use cases for each, such as payments for SQL and product catalogs for NoSQL.",
+      "Avoid the outdated claim that NoSQL cannot do transactions, since several now support ACID."
+    ],
+    "mistakes": [
+      "Claiming NoSQL is always faster or more scalable than SQL.",
+      "Treating NoSQL as one technology instead of several different data models.",
+      "Choosing NoSQL just to avoid designing a schema."
+    ],
+    "follow_ups": [
+      "How would you model a one-to-many relationship in a document database?",
+      "What is eventual consistency, and when is it acceptable?"
+    ]
+  },
+  {
+    "id": 53,
+    "category": "Databases & SQL",
+    "difficulty": "Easy",
+    "question": "What is the difference between DELETE, TRUNCATE and DROP?",
+    "keywords": [
+      "DELETE",
+      "TRUNCATE",
+      "DROP",
+      "WHERE|where clause",
+      "rollback|roll back|rolled back",
+      "triggers|trigger",
+      "table structure|structure|definition"
+    ],
+    "model_answer": "All three remove data, but at different levels. DELETE is a data manipulation command that removes all rows or only those matching a WHERE clause. It works row by row, logs each deletion and fires delete triggers, so it is slow on large tables, but it can be rolled back inside a transaction. TRUNCATE removes every row at once, usually by deallocating the table's data pages, so it is much faster. It has no WHERE clause, does not fire row-level delete triggers, and often resets auto-increment counters. Its rollback behavior depends on the database. For example, PostgreSQL can roll back a TRUNCATE inside a transaction, while MySQL treats it as a definition command and commits implicitly, so it cannot be undone. DROP is a data definition command that removes the table itself, including its structure, indexes, constraints and permissions. In practice, use DELETE for selective removal, TRUNCATE to empty a staging table quickly, and DROP only when the table is no longer needed.",
+    "tips": [
+      "Compare all three on what they remove, speed, filtering and whether they can be undone.",
+      "Say that TRUNCATE's rollback behavior depends on the database, and give one concrete example.",
+      "Mention triggers and auto-increment counters to show you know the practical differences."
+    ],
+    "mistakes": [
+      "Stating that TRUNCATE can never be rolled back, which is false in PostgreSQL.",
+      "Saying DELETE and TRUNCATE are identical apart from speed.",
+      "Confusing DROP, which removes the whole table, with removing only its rows."
+    ],
+    "follow_ups": [
+      "Why is TRUNCATE faster than DELETE without a WHERE clause?",
+      "How would you safely delete millions of rows from a live production table?"
+    ]
+  },
+  {
+    "id": 54,
+    "category": "OS & Networking",
+    "difficulty": "Easy",
+    "question": "What is the difference between a process and a thread?",
+    "keywords": [
+      "address space|memory space|memory",
+      "stack|stacks|registers|program counter",
+      "context switch|context switching|context-switch",
+      "isolation|isolated|isolate",
+      "synchronization|synchronisation|synchroniz|synchronis|locks|lock|mutex",
+      "concurrency|concurrent|parallel"
+    ],
+    "model_answer": "A process is a running program with its own private address space and system resources. A thread is a unit of execution inside a process, and it is the unit the CPU scheduler runs. Threads in the same process share the heap, global data and open files, but each thread has its own stack, registers and program counter. Because processes are isolated, a crash in one process does not affect another, while a crash in one thread usually takes down the whole process. Threads are lighter, so creating them and context switching between them is cheaper, because the address space stays the same. However, shared memory means threads need synchronization, such as locks, to avoid race conditions. For example, modern browsers run tabs in separate processes for isolation and security, while each tab uses several threads for concurrency, such as rendering and network requests. In short, choose processes for isolation and threads for efficient concurrent work on shared data.",
+    "tips": [
+      "Define each term, then contrast them on memory, cost of switching and fault isolation, with one example.",
+      "Note that threads share the heap, but each thread keeps its own stack and registers.",
+      "Mention the race conditions that shared memory creates and how locks prevent them."
+    ],
+    "mistakes": [
+      "Saying threads share everything, forgetting that each thread has its own stack and registers.",
+      "Claiming a crashing thread only kills itself; it usually terminates the whole process.",
+      "Forgetting that shared memory requires synchronization to avoid race conditions."
+    ],
+    "follow_ups": [
+      "What is a race condition and how do you prevent it?",
+      "What is the difference between multithreading and multiprocessing in Python?"
+    ]
+  },
+  {
+    "id": 55,
+    "category": "OS & Networking",
+    "difficulty": "Medium",
+    "question": "What is a deadlock, and how can it be prevented?",
+    "keywords": [
+      "mutual exclusion|mutually exclusive",
+      "hold and wait|hold-and-wait",
+      "no preemption|non-preemption|preemption|pre-emption|preempt",
+      "circular wait|circular|cycle",
+      "lock ordering|lock order|same order|ordering",
+      "timeouts|timeout|time out|time-out",
+      "detection|detect|wait-for graph"
+    ],
+    "model_answer": "A deadlock is a state where two or more threads wait forever, because each one holds a resource that another needs. For example, thread A locks account 1 and waits for account 2, while thread B, running the opposite transfer, holds account 2 and waits for account 1. A deadlock is possible only when all four Coffman conditions hold together. First, mutual exclusion: a resource can be held by only one thread at a time. Second, hold and wait: a thread keeps its locks while requesting more. Third, no preemption: a lock cannot be taken away by force. Finally, circular wait: a cycle where each thread waits for the next. To prevent deadlock, we break at least one condition. The most practical method is a global lock order, for example always locking the lower account ID first, which removes circular wait. Other options are acquiring all locks at once, or using lock timeouts and releasing everything on failure. Many databases instead detect deadlocks with a wait-for graph and abort one transaction, which the application retries.",
+    "tips": [
+      "Define it with a concrete two-thread example, name the necessary conditions, then explain how to break them.",
+      "Name all four Coffman conditions and map each prevention technique to the condition it breaks.",
+      "Distinguish prevention from avoidance and detection, such as databases aborting a victim transaction."
+    ],
+    "mistakes": [
+      "Listing the four conditions without explaining how to break any of them.",
+      "Confusing deadlock with livelock, where threads keep running but make no progress.",
+      "Thinking one condition alone causes deadlock, when all four must hold together."
+    ],
+    "follow_ups": [
+      "What is the difference between deadlock, livelock and starvation?",
+      "How does the Banker's algorithm avoid deadlock?"
+    ]
+  },
+  {
+    "id": 56,
+    "category": "OS & Networking",
+    "difficulty": "Easy",
+    "question": "Explain the difference between TCP and UDP.",
+    "keywords": [
+      "connection-oriented|connection oriented|connection-based|connection based",
+      "connectionless|connection-less|connection less",
+      "reliable delivery|reliable|reliability|guarantee|in-order|in order|acknowledg|retransmi",
+      "handshake|three-way|three way",
+      "congestion control|flow control|congestion",
+      "low latency|latency|faster|speed|overhead|lightweight",
+      "real-time apps|real-time|real time|video|gaming|games|DNS|voice|streaming"
+    ],
+    "model_answer": "TCP and UDP are both transport-layer protocols that run on top of IP, but they make opposite trade-offs. TCP is connection-oriented. It opens a connection with a three-way handshake, then guarantees reliable, in-order delivery of a byte stream using sequence numbers, acknowledgments and retransmission. It also provides flow control and congestion control. UDP is connectionless. It sends independent datagrams with no handshake and no guarantee of delivery or order, and its header is only eight bytes. As a result, UDP has lower latency and overhead, but the application must handle or tolerate loss itself. For example, TCP suits file transfers, email and database connections, where every byte must arrive correctly. UDP suits DNS lookups, online games and video calls, where speed matters more and a late packet is useless. In addition, QUIC, the protocol behind HTTP/3, runs over UDP and adds its own reliability and encryption, while avoiding TCP's head-of-line blocking.",
+    "tips": [
+      "Compare the two on connection setup, reliability, ordering and speed, then give use cases for each.",
+      "Explain how TCP achieves reliability: sequence numbers, acknowledgments, retransmission and congestion control.",
+      "Mention that QUIC and HTTP/3 run over UDP to show current knowledge."
+    ],
+    "mistakes": [
+      "Calling UDP useless because it is unreliable, ignoring DNS, games and calls.",
+      "Saying TCP sends messages, when it delivers a byte stream without message boundaries.",
+      "Thinking UDP is outdated, when QUIC and HTTP/3 are built on it."
+    ],
+    "follow_ups": [
+      "How does the TCP three-way handshake work?",
+      "Why does HTTP/3 use QUIC over UDP instead of TCP?"
+    ]
+  },
+  {
+    "id": 57,
+    "category": "OS & Networking",
+    "difficulty": "Hard",
+    "question": "What happens when you type a URL into a browser and press Enter?",
+    "keywords": [
+      "DNS|domain name system|name server|nameserver|resolver",
+      "TCP|three-way handshake|three way handshake|SYN",
+      "TLS|SSL|HTTPS|certificate",
+      "HTTP request|GET request|request",
+      "response|status code",
+      "rendering|render|DOM|paint",
+      "caching|cache|cached|CDN"
+    ],
+    "model_answer": "First, the browser parses the URL and checks whether HSTS rules require HTTPS. Then it resolves the domain name to an IP address with DNS, checking local caches first and then a recursive resolver, which queries the root, top-level domain and authoritative name servers as needed. Next, it opens a TCP connection with a three-way handshake of SYN, SYN-ACK and ACK. For HTTPS, a TLS handshake follows: the server presents its certificate, the browser verifies it against trusted authorities, and both sides derive shared session keys. Modern TLS needs only one round trip, and HTTP/3 merges these steps by running over QUIC on UDP. The browser then sends an HTTP GET request with headers such as cookies and accepted formats. A CDN can answer from its cache; otherwise, a load balancer forwards the request to an application server, which builds the response, often by querying a database. The response carries a status code, headers and an HTML body. Finally, the browser renders the page. It parses HTML into the DOM and CSS into the CSSOM, runs JavaScript, fetches images and scripts, then performs layout and paint.",
+    "tips": [
+      "Walk through the journey in order, layer by layer, naming each step before adding detail.",
+      "Cover DNS resolution, the TCP and TLS handshakes, the HTTP exchange and browser rendering in sequence.",
+      "Add depth where you are strongest, such as DNS caching, TLS certificates or the critical rendering path."
+    ],
+    "mistakes": [
+      "Skipping DNS or TLS and jumping straight from typing the URL to the server.",
+      "Getting the order wrong, for example sending the HTTP request before the TLS handshake.",
+      "Spending the whole answer on one layer and never reaching rendering."
+    ],
+    "follow_ups": [
+      "How does the browser verify that a TLS certificate is valid?",
+      "What is the critical rendering path, and how can you shorten it?"
+    ]
+  },
+  {
+    "id": 58,
+    "category": "OS & Networking",
+    "difficulty": "Medium",
+    "question": "What is virtual memory, and why is it useful?",
+    "keywords": [
+      "address space|virtual address",
+      "page table|page tables",
+      "MMU|memory management unit|translat",
+      "TLB|translation lookaside",
+      "page fault|page faults|page-fault",
+      "isolation|isolated|protection|protect",
+      "disk|swap|swapping|thrashing"
+    ],
+    "model_answer": "Virtual memory is an abstraction where each process gets its own private address space, which the operating system and hardware map onto physical RAM. Memory is divided into fixed-size pages, commonly four kilobytes, and a page table records which physical frame holds each virtual page. On every access, the memory management unit, or MMU, translates the virtual address, and a cache called the TLB keeps this fast. If a page is not in RAM, a page fault occurs, and the operating system loads it from disk, evicting another page if memory is full. This gives three big benefits. First, isolation, because one process cannot read or corrupt another's memory. Second, programs can use more memory than is physically installed, since rarely used pages stay on disk. Third, efficiency, because pages are loaded only when needed and can be shared, for example one copy of a shared library mapped into many processes. The trade-off is overhead, and if the working set exceeds RAM, constant page faults cause thrashing and performance collapses.",
+    "tips": [
+      "Define the abstraction, explain the translation mechanism step by step, then list the benefits and costs.",
+      "Explain pages, page tables, the TLB and what happens on a page fault.",
+      "Mention thrashing as the cost when the working set no longer fits in RAM."
+    ],
+    "mistakes": [
+      "Defining virtual memory as just swap space on disk, missing address translation and isolation.",
+      "Confusing virtual memory with virtual machines.",
+      "Forgetting the TLB, which makes address translation fast enough to be practical."
+    ],
+    "follow_ups": [
+      "What is the difference between paging and segmentation?",
+      "What happens step by step during a page fault?"
+    ]
+  },
+  {
+    "id": 59,
+    "category": "OS & Networking",
+    "difficulty": "Medium",
+    "question": "Briefly explain the layers of the OSI model.",
+    "keywords": [
+      "physical layer|physical|bits",
+      "data link|data-link|MAC|frames",
+      "network layer|routing|routes|router|IP address|packets",
+      "transport layer|transport|TCP|UDP|ports",
+      "session layer|session",
+      "presentation layer|presentation|encryption|encoding",
+      "application layer|HTTP|DNS|SMTP"
+    ],
+    "model_answer": "The OSI model is a seven-layer reference model that splits network communication into layers, where each layer serves the one above it. From the bottom, layer one, physical, sends raw bits over cables, fiber or radio. Layer two, data link, moves frames between devices on the same network using MAC addresses, and this is where Ethernet, Wi-Fi and switches work. Layer three, network, routes packets across networks using IP addresses, and routers operate here. Layer four, transport, provides end-to-end delivery between applications using ports, with TCP for reliability or UDP for speed. Layer five, session, manages the dialog between applications. Layer six, presentation, handles data formats, encoding and encryption. Layer seven, application, contains protocols such as HTTP, DNS and SMTP. For example, a web request is HTTP data, wrapped in a TCP segment, then an IP packet, then an Ethernet frame, which is called encapsulation. In practice, the internet runs on the simpler TCP/IP model, which merges layers five to seven into one application layer, so OSI serves mainly as a shared vocabulary, as in a layer 7 load balancer.",
+    "tips": [
+      "Go through the layers in order, giving each layer's job plus one protocol or device that works there.",
+      "Use a mnemonic to recall the order, such as 'Please Do Not Throw Sausage Pizza Away'.",
+      "Show practical sense: explain encapsulation and how the TCP/IP model maps onto OSI."
+    ],
+    "mistakes": [
+      "Mixing up the order of the middle layers, such as session and transport.",
+      "Putting IP at the transport layer or TCP at the network layer.",
+      "Presenting OSI as what the internet runs on, rather than a reference model."
+    ],
+    "follow_ups": [
+      "At which layers do switches, routers and load balancers operate?",
+      "How does the TCP/IP model differ from the OSI model?"
+    ]
+  },
+  {
+    "id": 60,
+    "category": "Web & APIs",
+    "difficulty": "Easy",
+    "question": "What is the difference between authentication and authorization?",
+    "keywords": [
+      "authentication|authenticate|authN",
+      "authorization|authorisation|authorize|authorise|authZ",
+      "identity|who you are|who the user is",
+      "permissions|permission|permitted|allowed",
+      "multi-factor|multi factor|MFA|two-factor|two factor",
+      "role-based access control|role-based|roles|RBAC|access control",
+      "forbidden|unauthorized|unauthorised|status code"
+    ],
+    "model_answer": "Authentication verifies who you are, while authorization decides what you are allowed to do, and authentication always comes first. To authenticate, a user proves their identity with something they know, such as a password, something they have, such as a phone or security key, or something they are, such as a fingerprint. Combining two or more of these is multi-factor authentication. Authorization then checks that identity against permissions, often through role-based access control with roles such as admin or viewer. For example, logging in to a banking app with a password and a one-time code is authentication, while seeing your own account but not another customer's is authorization. HTTP reflects the difference: 401 Unauthorized means you are not authenticated, while 403 Forbidden means you are authenticated but not permitted. Similarly, OAuth handles delegated authorization, while OpenID Connect adds authentication on top of it. Finally, authorization must be enforced on the server for every request, not only in the user interface.",
+    "tips": [
+      "Give a one-line definition of each, state their order, then use one everyday example for both.",
+      "Mention 401 versus 403, and that OAuth handles authorization while OpenID Connect handles authentication.",
+      "Stress that authorization checks must run on the server for every request."
+    ],
+    "mistakes": [
+      "Using the two terms interchangeably or reversing their definitions.",
+      "Saying a 401 status means the user lacks permission, when that is 403.",
+      "Hiding buttons in the interface instead of enforcing permissions on the server."
+    ],
+    "follow_ups": [
+      "What is the difference between role-based and attribute-based access control?",
+      "How does OAuth differ from OpenID Connect?"
+    ]
+  },
+  {
+    "id": 61,
+    "category": "Web & APIs",
+    "difficulty": "Medium",
+    "question": "Compare session-based and token-based (JWT) authentication.",
+    "keywords": [
+      "session ID|session id|session store|server-side|server side",
+      "stateless|state-less",
+      "signature|signed|signing",
+      "not encrypted|decod|base64",
+      "revocation|revok|denylist|blacklist|blocklist|logout|log out",
+      "refresh tokens|refresh token|short-lived|short lived|expiry|expir",
+      "token storage|HttpOnly|XSS|CSRF|cross-site|localStorage|local storage"
+    ],
+    "model_answer": "With session-based authentication, the server stores session data, for example in Redis, and sends the browser a random session ID in a cookie. On every request, the server looks up that ID, and logging out simply deletes the record. Token-based authentication with a JWT, or JSON Web Token, is stateless instead. The server issues a token containing claims, such as the user ID, role and expiry, and signs it with a secret or private key. Any service holding the verification key can check the signature without a database lookup, which suits microservices and mobile apps. However, a standard JWT is signed, not encrypted, so anyone can decode its payload, and it must never hold secrets. The biggest drawback is revocation, because a stolen token stays valid until it expires. Teams therefore use short-lived access tokens with refresh tokens, or a denylist, which brings back some server state. For storage, an HttpOnly cookie keeps the token away from JavaScript, so injected scripts cannot read it, but it needs CSRF protection such as SameSite cookies. In contrast, localStorage is readable by any script. Overall, sessions suit a single web app, while JWTs fit distributed systems.",
+    "tips": [
+      "Explain how each approach works end to end, then compare them on state, revocation, security and scaling.",
+      "Point out that a standard JWT is signed but not encrypted, so its payload is readable.",
+      "Discuss where to store tokens: HttpOnly cookies versus localStorage, and the XSS versus CSRF trade-off."
+    ],
+    "mistakes": [
+      "Claiming JWTs are encrypted and safe for storing sensitive data.",
+      "Ignoring revocation: logging out does not invalidate an already issued JWT.",
+      "Treating cookies and tokens as opposites, when a JWT can live in a cookie."
+    ],
+    "follow_ups": [
+      "How do refresh tokens work, and how would you rotate them safely?",
+      "How would you log a user out of every device when using JWTs?"
+    ]
+  },
+  {
+    "id": 62,
+    "category": "Web & APIs",
+    "difficulty": "Medium",
+    "question": "What is CORS, and why do browsers enforce it?",
+    "keywords": [
+      "same-origin policy|same origin policy|same-origin|same origin",
+      "scheme host and port|scheme|port",
+      "Access-Control-Allow-Origin|access control allow origin|access-control|access control|allow origin",
+      "browser enforces|enforced by the browser|browser|browsers",
+      "preflight|pre-flight|pre flight",
+      "OPTIONS",
+      "credentials|cookies|cookie|authentication"
+    ],
+    "model_answer": "CORS, or cross-origin resource sharing, is a mechanism that lets a server relax the browser's same-origin policy in a controlled way. An origin is the scheme, host and port together. By default, the same-origin policy stops a script on one origin from reading responses from another, so a malicious site cannot read your data using your logged-in cookies. With CORS, the server returns headers such as Access-Control-Allow-Origin to say which origins may read its responses. Importantly, the browser enforces CORS, not the server. A simple request still reaches the server, but the browser blocks the page from reading the response, while tools such as curl ignore CORS completely. For other requests, such as a PUT, a JSON content type or custom headers, the browser first sends a preflight OPTIONS request and continues only if the server allows that method and those headers. For example, a front end on localhost port 3000 calling an API on port 8000 needs the API to allow that origin. However, CORS only governs browsers, so it never replaces authentication on the API.",
+    "tips": [
+      "Explain the underlying browser security rule first, then how CORS works, who enforces it, and preflight.",
+      "Be precise: CORS relaxes the same-origin policy, and the browser, not the server, enforces it.",
+      "Describe when a preflight OPTIONS request happens and which headers the server must return."
+    ],
+    "mistakes": [
+      "Saying CORS protects the server from attackers, when it only controls what browsers let pages read.",
+      "Thinking CORS blocks the request itself, when simple requests still reach the server.",
+      "Fixing errors by allowing every origin, or reflecting any origin with credentials."
+    ],
+    "follow_ups": [
+      "Which requests trigger a preflight, and how can you reduce preflight overhead?",
+      "How is CORS different from CSRF, and does CORS prevent CSRF?"
+    ]
+  },
+  {
+    "id": 63,
+    "category": "Web & APIs",
+    "difficulty": "Easy",
+    "question": "Explain common HTTP status codes.",
+    "keywords": [
+      "five classes|classes|class|categories|category|first digit",
+      "success|successful|OK",
+      "redirect|redirection|redirects|moved",
+      "client error|client errors|client-side|bad request",
+      "server error|server errors|server-side|internal server error",
+      "not found",
+      "unauthorized|unauthorised|unauthenticated|forbidden"
+    ],
+    "model_answer": "HTTP status codes are three-digit numbers that tell the client the outcome of a request, and the first digit gives the class. The 100s are informational and rarely seen directly. The 200s mean success, such as 200 OK, 201 Created after a POST, and 204 No Content. The 300s are redirects, such as 301 Moved Permanently, 302 Found for a temporary move, and 304 Not Modified, which lets the browser reuse its cached copy. The 400s are client errors. For example, 400 Bad Request means invalid input, 401 Unauthorized means not authenticated, 403 Forbidden means authenticated but not permitted, 404 Not Found means no such resource, and 429 Too Many Requests means rate limited. The 500s are server errors, such as 500 Internal Server Error for an unhandled bug, 502 Bad Gateway when a proxy gets a bad upstream response, and 503 Service Unavailable during overload. Accurate codes matter, because clients, caches and monitoring depend on them. For example, a client can retry a 503 after a delay, but retrying an unchanged 400 is pointless.",
+    "tips": [
+      "Organize the answer by class, giving each class's meaning and two or three common codes.",
+      "Contrast 401 and 403 clearly, and mention 429 for rate limiting.",
+      "Explain why correct codes matter for clients, caching, retries and monitoring."
+    ],
+    "mistakes": [
+      "Returning 200 with an error message in the body, which hides failures from clients and monitoring.",
+      "Mixing up 401 and 403, or using 500 for invalid user input.",
+      "Treating 301 and 302 as the same, although browsers cache 301 redirects."
+    ],
+    "follow_ups": [
+      "What is the difference between 301, 302, 307 and 308 redirects?",
+      "Which status code would you return for a validation error, and why?"
+    ]
+  },
+  {
+    "id": 64,
+    "category": "Web & APIs",
+    "difficulty": "Medium",
+    "question": "How would you improve the performance of a slow web page?",
+    "keywords": [
+      "measure first|measure|profile|profiling|developer tools|DevTools",
+      "Core Web Vitals|web vitals|LCP|INP|CLS|contentful paint",
+      "compression|compress|gzip|Brotli|minif",
+      "images|image|WebP|AVIF|lazy",
+      "CDN|content delivery network|caching|cache",
+      "JavaScript bundles|bundle|code splitting|defer|JavaScript",
+      "database|indexes|index|backend|queries|N+1"
+    ],
+    "model_answer": "First, I measure before changing anything. I profile with browser developer tools and real-user monitoring, and I check the Core Web Vitals: Largest Contentful Paint for loading, Interaction to Next Paint for responsiveness, and Cumulative Layout Shift for visual stability. Then I fix the biggest bottleneck first. On the network side, I compress text with Brotli or gzip, serve images in modern formats such as WebP or AVIF at the correct size, and lazy-load offscreen images, but never the main hero image. Static assets go on a CDN with long cache lifetimes. For JavaScript, I split bundles, remove unused code and defer non-critical scripts, because heavy JavaScript blocks the main thread. I also inline critical CSS and reserve space for images to prevent layout shifts. On the backend, I look for slow API calls, add database indexes, fix N+1 queries and cache expensive responses. For example, during my internship, adding one index and lazy-loading charts reduced a dashboard's load time from six seconds to under two. Finally, I monitor these metrics continuously, so performance does not regress.",
+    "tips": [
+      "Start with how you would diagnose the problem, then work through fixes layer by layer, in priority order.",
+      "Name current metrics such as LCP, INP and CLS rather than a vague goal of 'faster'.",
+      "Cover both front end and backend, and quantify the result of one optimization you made."
+    ],
+    "mistakes": [
+      "Jumping to fixes without measuring, so effort goes to the wrong bottleneck.",
+      "Lazy-loading the main above-the-fold image, which delays Largest Contentful Paint.",
+      "Focusing only on the front end and ignoring slow APIs or database queries."
+    ],
+    "follow_ups": [
+      "How would you reduce Interaction to Next Paint on a JavaScript-heavy page?",
+      "How do you set cache headers for static assets that change between deployments?"
+    ]
+  },
+  {
+    "id": 65,
+    "category": "Machine Learning",
+    "difficulty": "Medium",
+    "question": "Explain the bias-variance tradeoff.",
+    "keywords": [
+      "underfitting|underfit|under-fit|under fit",
+      "overfitting|overfit|over-fit|over fit",
+      "model complexity|complexity|complex|flexib",
+      "irreducible error|irreducible|noise",
+      "learning curves|learning curve|validation error|training error",
+      "regularization|regularisation|regulariz|regularis|more data|bagging"
+    ],
+    "model_answer": "The bias-variance tradeoff describes two sources of prediction error that pull in opposite directions. Bias is error from overly simple assumptions, so a high-bias model underfits, for example a straight line fitted to curved data. Variance is error from sensitivity to the specific training set, so a high-variance model overfits and changes a lot between training samples, for example a very deep decision tree. For squared-error loss, expected test error equals bias squared plus variance plus irreducible noise. As model complexity increases, bias usually falls while variance rises, so the goal is the complexity with the lowest total error. In practice, I diagnose it with learning curves. High training and validation error means high bias, so I add features or use a more flexible model. Low training error but much higher validation error means high variance, so I add data, regularize, or use bagging. However, very large neural networks can show double descent, where test error falls again after the model fits the training data perfectly, so the classic U-shaped curve is a guide, not a law.",
+    "tips": [
+      "Define each error source with a simple example, then explain how model complexity shifts the balance between them.",
+      "Link high bias to underfitting and high variance to overfitting, and give a fix for each.",
+      "Explain how learning curves reveal which of the two problems you have."
+    ],
+    "mistakes": [
+      "Confusing statistical bias with unfair bias in the data or predictions.",
+      "Forgetting the irreducible noise term, which no model can remove.",
+      "Mixing up which one causes overfitting and which causes underfitting."
+    ],
+    "follow_ups": [
+      "How do bagging and boosting affect bias and variance differently?",
+      "How would you use learning curves to decide whether more data will help?"
+    ]
+  },
+  {
+    "id": 66,
+    "category": "Machine Learning",
+    "difficulty": "Medium",
+    "question": "What are precision, recall and F1-score, and when does each matter?",
+    "keywords": [
+      "true positives|true positive",
+      "false positives|false positive",
+      "false negatives|false negative",
+      "harmonic mean|harmonic",
+      "imbalanced data|imbalanced|imbalance|unbalanced|skewed",
+      "threshold|thresholds|cutoff",
+      "example use case|spam|fraud|cancer|medical|disease|diagnosis"
+    ],
+    "model_answer": "Precision and recall measure two different kinds of error for the positive class. Precision is true positives divided by all predicted positives, so it answers: when the model says yes, how often is it correct? Recall is true positives divided by all actual positives, so it answers: of all real positives, how many did we catch? The F1-score is their harmonic mean, two times precision times recall over their sum, so it is high only when both are high. Precision matters when false positives are costly, for example a spam filter that hides an important email. Recall matters when false negatives are costly, such as cancer screening or fraud detection, where missing a case is expensive. F1 is useful when you need one balanced number, especially on imbalanced data where accuracy misleads. For example, with one percent fraud, a model that always predicts legitimate gets ninety-nine percent accuracy but zero recall. Finally, raising the decision threshold usually increases precision and lowers recall, so I set the threshold based on business costs.",
+    "tips": [
+      "Define each metric with its formula and plain meaning, then tie each one to a scenario where it matters.",
+      "Use concrete costs: false positives in spam filtering, false negatives in medical screening.",
+      "Explain the threshold trade-off and why accuracy misleads on imbalanced data."
+    ],
+    "mistakes": [
+      "Swapping the formulas, for example dividing by actual positives for precision.",
+      "Calling F1 a simple average instead of the harmonic mean.",
+      "Reporting accuracy alone on an imbalanced dataset."
+    ],
+    "follow_ups": [
+      "When would you use the F-beta score instead of F1?",
+      "How do you compute precision and recall for a multi-class problem?"
+    ]
+  },
+  {
+    "id": 67,
+    "category": "Machine Learning",
+    "difficulty": "Medium",
+    "question": "How does a decision tree work, and how does a random forest improve on it?",
+    "keywords": [
+      "splits|split|splitting",
+      "Gini impurity|Gini|entropy|information gain|impurity",
+      "overfitting|overfit|over-fit|high variance",
+      "bagging|bootstrap|bootstrapping",
+      "random feature subset|random subset|subset of features|feature subset|random features",
+      "majority vote|voting|vote|averag",
+      "interpretability|interpretab|explainab|easy to explain"
+    ],
+    "model_answer": "A decision tree predicts by asking a sequence of yes-or-no questions about the features. At each node, the algorithm greedily picks the feature and threshold that best split the data, measured by Gini impurity or entropy for classification, or variance reduction for regression. It repeats this recursively until leaves are pure or a stopping rule, such as maximum depth, is reached. A prediction follows the path to a leaf and returns its majority class or average value. Trees are easy to interpret and need no feature scaling. However, a deep tree overfits, and a small change in the data can produce a very different tree. A random forest reduces this high variance by training many trees on bootstrap samples of the data, which is called bagging. In addition, each split considers only a random subset of features, so the trees are less correlated. The forest combines them by majority vote or averaging, so individual errors cancel out and accuracy improves. The trade-off is less interpretability and slower predictions. For example, for loan approval, one shallow tree is easy to explain, while a forest is more accurate.",
+    "tips": [
+      "Explain how one tree is built and used first, then its weakness, then how the ensemble fixes it.",
+      "Name the split criteria, such as Gini impurity or entropy, and explain why deep trees overfit.",
+      "Mention both sources of randomness: bootstrap samples and random feature subsets at each split."
+    ],
+    "mistakes": [
+      "Saying random forests use boosting, when they use bagging and train trees independently.",
+      "Forgetting the random feature subset, which is what decorrelates the trees.",
+      "Claiming random forests never overfit, regardless of tree depth or noisy data."
+    ],
+    "follow_ups": [
+      "How does gradient boosting differ from a random forest?",
+      "What is out-of-bag error, and why is it useful?"
+    ]
+  },
+  {
+    "id": 68,
+    "category": "Machine Learning",
+    "difficulty": "Medium",
+    "question": "What is gradient descent?",
+    "keywords": [
+      "loss function|loss|cost function",
+      "derivatives|derivative|slope|steepest",
+      "learning rate|step size",
+      "stochastic|SGD|mini-batch|mini batch|minibatch",
+      "global minimum|local minimum|minimum|minima|convex",
+      "backpropagation|back propagation|backprop",
+      "Adam|momentum|optimizer|optimiser"
+    ],
+    "model_answer": "Gradient descent is an iterative optimization algorithm that minimizes a loss function by repeatedly adjusting a model's parameters. First, we compute the gradient, the vector of partial derivatives of the loss with respect to each parameter, which points in the direction of steepest increase. Then we move each parameter a small step in the opposite direction, scaled by the learning rate, and repeat until the loss stops improving. In neural networks, backpropagation computes these gradients efficiently. The learning rate is the critical hyperparameter: too small and training is slow, too large and the loss oscillates or diverges. Batch gradient descent uses the whole dataset per step, which is stable but slow, while stochastic gradient descent uses one example, which is fast but noisy. Mini-batch gradient descent, the standard in deep learning, sits in between. For example, in linear regression each step lowers the mean squared error until it converges. For convex problems such as this, it reaches the global minimum with a suitable learning rate. Neural networks are non-convex, so optimizers such as momentum and Adam, plus learning-rate schedules, help it find a good solution.",
+    "tips": [
+      "Explain the intuition first, then the update rule, the key hyperparameter and the main variants.",
+      "State the update rule, parameters minus learning rate times gradient, and explain the learning-rate trade-off.",
+      "Compare batch, stochastic and mini-batch versions, and mention modern optimizers such as Adam."
+    ],
+    "mistakes": [
+      "Saying parameters move in the direction of the gradient instead of against it.",
+      "Claiming gradient descent always finds the global minimum, even for neural networks.",
+      "Confusing gradient descent with backpropagation, which only computes the gradients."
+    ],
+    "follow_ups": [
+      "How does the Adam optimizer differ from plain stochastic gradient descent?",
+      "What would you do if your training loss starts increasing or becomes NaN?"
+    ]
+  },
+  {
+    "id": 69,
+    "category": "Machine Learning",
+    "difficulty": "Hard",
+    "question": "How do you handle an imbalanced dataset?",
+    "keywords": [
+      "precision and recall|precision|recall|F1|average precision",
+      "resampling|resample|oversampl|undersampl|over-sampl|under-sampl",
+      "SMOTE|synthetic",
+      "class weights|class weight|weighted|cost-sensitive|cost sensitive",
+      "threshold|thresholds|cutoff|cut-off",
+      "training data only|only the training|only to the training|training data|training set|leakage",
+      "stratified|stratify|stratification"
+    ],
+    "model_answer": "An imbalanced dataset has one class that is much rarer than the others, such as one fraud case per thousand transactions. First, I fix the evaluation, because accuracy is misleading: always predicting not fraud scores ninety-nine point nine percent. Instead, I use precision, recall, F1 and the precision-recall curve, which is often more informative than ROC AUC when positives are rare. I also use stratified splits, so every fold keeps the class ratio. Next, I handle the imbalance in training. Class weights make mistakes on the minority class cost more in the loss, and they are often the simplest fix. Alternatively, I resample, by undersampling the majority class or oversampling the minority, for example with SMOTE, which creates synthetic examples by interpolating between minority neighbors. Importantly, resampling is applied only to the training data, inside each cross-validation fold, so validation and test sets keep the real distribution. Then I tune the decision threshold on the validation set, because the default fifty percent cutoff is rarely optimal, and I choose it from the business cost of each error type. Finally, weighting and resampling distort predicted probabilities, so I recalibrate them when calibrated scores matter.",
+    "tips": [
+      "Structure the answer around evaluation, training-time fixes and decision-time fixes, and explain why each matters.",
+      "Explain why accuracy fails and which metrics replace it, such as precision, recall and PR AUC.",
+      "Stress that resampling is applied only to training data, inside each cross-validation fold."
+    ],
+    "mistakes": [
+      "Applying SMOTE before the train-test split, which leaks synthetic points into evaluation.",
+      "Reporting accuracy or ROC AUC alone when positives are very rare.",
+      "Keeping the default threshold instead of tuning it to the cost of each error."
+    ],
+    "follow_ups": [
+      "How does SMOTE generate synthetic samples, and when can it hurt?",
+      "How would you choose a decision threshold when false negatives cost ten times more?"
+    ]
+  },
+  {
+    "id": 70,
+    "category": "Machine Learning",
+    "difficulty": "Hard",
+    "question": "What is a transformer model, and why is attention important?",
+    "keywords": [
+      "self-attention|self attention",
+      "query key value|query|queries",
+      "multi-head|multi head|multihead|attention heads|heads",
+      "positional encoding|positional|position",
+      "parallel|paralleliz|parallelis",
+      "long-range|long range|context|dependenc",
+      "RNN|recurrent|recurrence|LSTM|sequential"
+    ],
+    "model_answer": "A transformer is a neural network architecture that processes a sequence with attention instead of recurrence. First, each token becomes an embedding plus positional information, because attention alone has no sense of order. The core is self-attention. Each token is projected into a query, key and value. The model scores each query against every key with scaled dot products, applies softmax to get attention weights, and outputs a weighted sum of the values. As a result, each token can draw directly on any other token, however far apart. Multi-head attention runs several of these in parallel, so different heads capture different relationships. Each layer also has a feed-forward network, residual connections and layer normalization. Decoder-only models add a causal mask, so no token attends to later tokens. Attention matters for two reasons. First, it captures long-range context, which RNNs handle poorly because information fades over many steps. Second, all positions are processed in parallel during training, which made scaling to large language models practical. For example, in 'the animal didn't cross the street because it was tired', attention links 'it' to 'animal'. The trade-off is that attention cost grows quadratically with sequence length.",
+    "tips": [
+      "Describe the architecture at a high level, walk through the core mechanism step by step, then explain why it matters.",
+      "Explain queries, keys and values, the softmax-weighted sum, and why multiple heads help.",
+      "Contrast with RNNs on parallelism and long-range context, and mention the quadratic cost."
+    ],
+    "mistakes": [
+      "Describing attention only as focusing on important words, without queries, keys and values.",
+      "Forgetting positional information, without which the model cannot see word order.",
+      "Ignoring the quadratic cost of attention in sequence length."
+    ],
+    "follow_ups": [
+      "What is the difference between encoder-only, decoder-only and encoder-decoder transformers?",
+      "Why is the dot product scaled by the square root of the key dimension?"
+    ]
+  },
+  {
+    "id": 71,
+    "category": "System Design",
+    "difficulty": "Hard",
+    "question": "How would you design a URL shortener?",
+    "keywords": [
+      "requirements|clarify|functional",
+      "base62|base 62|base-62|encode|encoding",
+      "collisions|collision|unique ID|counter",
+      "redirect|redirects|redirection",
+      "caching|cache|Redis",
+      "key-value store|key-value|key value|database|NoSQL|storage",
+      "read-heavy|read heavy|reads per write|read to write|ratio"
+    ],
+    "model_answer": "First, I clarify requirements. Users submit a long URL and get a short code, and visiting the short link redirects them. Redirects must be fast and highly available, and traffic is read-heavy, so I assume about a hundred reads per write. Seven base62 characters give over three trillion codes, which covers billions of links. For code generation, I encode a unique ID in base62, using a distributed counter or pre-allocated ID ranges per server, because this guarantees no collisions. Hashing and truncating the long URL avoids coordination, but needs collision checks and retries. The API is a POST to create a link and a GET on the short code, which returns a redirect. I use 302 rather than 301 when we need click analytics, because browsers cache 301 redirects and skip our servers. For storage, a key-value store such as Cassandra, keyed by the short code, scales horizontally. Because reads dominate, a Redis cache in front of it serves popular links from memory, and stateless application servers scale out behind a load balancer. Finally, I add rate limiting against abuse, and send click events to a message queue, so analytics never slow down redirects.",
+    "tips": [
+      "Follow a clear design flow: requirements, estimates, API, data model, core algorithm, then scaling and trade-offs.",
+      "Compare counter-based base62 IDs with hashing, and explain how each handles collisions.",
+      "Explain the 301 versus 302 choice and how caching handles the read-heavy load."
+    ],
+    "mistakes": [
+      "Jumping into databases before clarifying requirements and scale.",
+      "Using a truncated hash without handling collisions.",
+      "Choosing 301 redirects while also promising accurate click analytics."
+    ],
+    "follow_ups": [
+      "How would you support custom aliases and link expiry?",
+      "How would you stop people from guessing or enumerating short links?"
+    ]
+  },
+  {
+    "id": 72,
+    "category": "System Design",
+    "difficulty": "Medium",
+    "question": "What is caching, and what are common caching strategies?",
+    "keywords": [
+      "cache-aside|cache aside|lazy loading",
+      "write-through|write through",
+      "write-back|write back|write-behind|write behind",
+      "eviction|evict|LRU|least recently used",
+      "TTL|time to live|time-to-live|expiry|expiration|expire",
+      "invalidation|invalidate|stale|staleness",
+      "cache hit and miss|cache miss|cache hit|miss|hit rate"
+    ],
+    "model_answer": "Caching stores copies of frequently used data in a faster layer, usually memory, so later requests skip slow work such as database queries. Caches exist at many levels, including the browser, a CDN, the application and a shared store such as Redis. The most common strategy is cache-aside: the application checks the cache first, and on a miss it reads the database and stores the result. With read-through, the cache itself loads missing data. For writes, write-through updates the cache and the database together, which keeps them consistent but adds write latency. Write-back, also called write-behind, writes to the cache first and flushes to the database later, which is fast but can lose data if the cache fails. When memory fills up, an eviction policy such as LRU removes the least recently used items, and a TTL expires entries after a set time. For example, caching product pages in Redis with a five-minute TTL can absorb most of the read traffic. The hard part is invalidation, so caching suits read-heavy data that tolerates brief staleness.",
+    "tips": [
+      "Define caching and where caches live, then cover read strategies, write strategies, eviction and invalidation.",
+      "Compare cache-aside, write-through and write-back on consistency, latency and risk of data loss.",
+      "Mention eviction policies such as LRU, TTLs, and the cache stampede problem."
+    ],
+    "mistakes": [
+      "Ignoring invalidation, so users see stale data after updates.",
+      "Confusing write-through with write-back and their durability trade-offs.",
+      "Caching everything, including rarely read or highly volatile data."
+    ],
+    "follow_ups": [
+      "How would you prevent a cache stampede when a popular key expires?",
+      "How do you keep a cache consistent with the database after updates?"
+    ]
+  },
+  {
+    "id": 73,
+    "category": "System Design",
+    "difficulty": "Medium",
+    "question": "Explain horizontal vs vertical scaling and the role of a load balancer.",
+    "keywords": [
+      "vertical scaling|vertical|scale up|scaling up|scale-up",
+      "horizontal scaling|horizontal|scale out|scaling out|scale-out",
+      "single point of failure|point of failure|SPOF|availability|redundan",
+      "stateless|state-less|session store|shared store",
+      "round robin|round-robin|least connections|algorithm",
+      "health checks|health check|healthy|unhealthy",
+      "hardware limit|limit|ceiling|expensive|cost"
+    ],
+    "model_answer": "Vertical scaling, or scaling up, means giving one machine more CPU, memory or faster storage. It is simple, because the application does not change, but it has a hardware ceiling, gets expensive at the top end, and leaves a single point of failure. Horizontal scaling, or scaling out, means adding more machines and spreading the load across them. It scales much further and improves availability, because losing one server does not take the system down. However, it adds complexity: servers should be stateless, with sessions kept in a shared store such as Redis, and the database needs replication or sharding. A load balancer makes horizontal scaling work. It sits in front of the servers and distributes requests with algorithms such as round robin or least connections. It also runs health checks and stops routing traffic to unhealthy servers. Layer 4 balancers route by IP address and port, while layer 7 balancers can route by URL path or headers. For example, auto-scaling can add servers behind the load balancer during a sale. Finally, the load balancer itself runs as a redundant pair, so it does not become a new single point of failure.",
+    "tips": [
+      "Define both approaches with their pros and cons, then explain what the load balancer adds.",
+      "Mention that horizontal scaling requires stateless servers and a plan for the database layer.",
+      "Name balancing algorithms, health checks and the layer 4 versus layer 7 difference."
+    ],
+    "mistakes": [
+      "Saying horizontal scaling is always better, ignoring its added complexity.",
+      "Keeping sessions in server memory, which breaks when requests reach different servers.",
+      "Making the load balancer a new single point of failure."
+    ],
+    "follow_ups": [
+      "How would you scale the database once the application tier is horizontal?",
+      "What is consistent hashing, and when would a load balancer use it?"
+    ]
+  },
+  {
+    "id": 74,
+    "category": "System Design",
+    "difficulty": "Medium",
+    "question": "Monolith vs microservices: what are the trade-offs?",
+    "keywords": [
+      "single codebase|codebase|single deployable|one deployable",
+      "independent deployment|independently|deploy independently",
+      "scaling|scale|scalab",
+      "fault isolation|isolat|contain failures|failure",
+      "operational complexity|complexity|complex|overhead",
+      "data consistency|consistency|transactions|own data|database per service",
+      "modular monolith|modular"
+    ],
+    "model_answer": "A monolith is a single deployable application, where all features share one codebase and usually one database. Microservices split the system into small, independently deployable services, each owning one business capability and its own data, and communicating through APIs or messaging. A monolith is simpler to build, test, debug and deploy, and in-process calls are fast, with easy database transactions. However, as the code and team grow, deployments become risky and slow, and the whole application must scale together. Microservices let teams deploy independently, scale only the busy services, use different technologies, and contain failures. The cost is distributed-systems complexity: network latency, partial failures, eventual consistency instead of simple transactions, and heavier operations, such as Kubernetes, service discovery and distributed tracing. For example, an online shop could scale its checkout service separately during a sale. Therefore, I recommend starting with a well-structured modular monolith, and extracting services only when clear boundaries, team size or scaling needs justify it. Otherwise, a badly split system becomes a distributed monolith, with the downsides of both.",
+    "tips": [
+      "Define both architectures, compare them on development, deployment, scaling and operations, then give your recommendation.",
+      "Name the hidden costs of microservices: network failures, data consistency and observability.",
+      "Recommend a modular monolith first, and explain when splitting into services is justified."
+    ],
+    "mistakes": [
+      "Presenting microservices as always better or more modern.",
+      "Sharing one database across all services, which couples them tightly.",
+      "Ignoring team size and operational maturity when choosing an architecture."
+    ],
+    "follow_ups": [
+      "How would you split an existing monolith into microservices safely?",
+      "How do you keep data consistent across services without distributed transactions?"
+    ]
+  }
+]

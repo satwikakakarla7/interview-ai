@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+env/
+
+# Local data and secrets: never commit these
+backend/interview.db
+backend/instance/
+*.db
+.env
+
+# Editors and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
